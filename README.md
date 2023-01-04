@@ -57,6 +57,9 @@ Wireframes for each page are linked here:
 
 [Login Page](docs/read-me/login-page.png)
 
+### **Database Schema**
+![Database Schema](docs/read-me/data-schema.png)
+
 ## **Features**
 
 ## **Testing**
