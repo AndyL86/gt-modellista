@@ -57,8 +57,6 @@ Wireframes for each page are linked here:
 
 [Login Page](docs/read-me/login-page.png)
 
-[Home Page](docs/read-me/home-page.png)
-
 ## **Features**
 
 ## **Testing**
