@@ -26,6 +26,36 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 
 ## **Design**
 
+### **Wireframes**
+[Home Page](docs/read-me/home-page.png)
+
+[About Page](docs/read-me/about-page.png)
+
+[Blog Page](docs/read-me/blog-page.png)
+
+[Build Threads Page](docs/read-me/build-threads.png)
+
+[Create Build Thread](docs/read-me/create-build-thread.png)
+
+[Build Thread Posts](docs/read-me/view-build-thread-post.png)
+
+[Diecasts Page](docs/read-me/diecasts.png)
+
+[Create Diecasts Post](docs/read-me/create-diecasts.png)
+
+[Diecasts Posts](docs/read-me/view-diecast-post.png)
+
+[Partners and Sponsors Page](docs/read-me/partners.png)
+
+[Partners/Sponsors Posts](docs/read-me/view-partners-post.png)
+
+[Contact Us Page](docs/read-me/contact-us.png)
+
+[Signup Page](docs/read-me/signup-page.png)
+
+[Login Page](docs/read-me/login-page.png)
+
+[Home Page](docs/read-me/home-page.png)
 ## **Features**
 
 ## **Testing**
