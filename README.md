@@ -27,6 +27,8 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 ## **Design**
 
 ### **Wireframes**
+Wireframes for each page are linked here:
+
 [Home Page](docs/read-me/home-page.png)
 
 [About Page](docs/read-me/about-page.png)
@@ -56,6 +58,7 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 [Login Page](docs/read-me/login-page.png)
 
 [Home Page](docs/read-me/home-page.png)
+
 ## **Features**
 
 ## **Testing**
