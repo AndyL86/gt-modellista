@@ -13,6 +13,8 @@ class Thread(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, 
                                related_name="build_threads")
     updated_date = models.DateTimeField(auto_now=True)
+    engine = models.PositiveSmallIntegerField()
+    bhp = models.PositiveSmallIntegerField()
     story = models.TextField()
     modifications = models.TextField()
     thread_image = CloudinaryField('image', default='placeholder')
