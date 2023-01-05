@@ -18,6 +18,8 @@ class Thread(models.Model):
     thread_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     post_date = models.DateTimeField(auto_now_add=True)
+    featured = models.BooleanField(default=False)
+    feature_cap = models.CharField(max_length=250, blank=True)
     likes = models.ManyToManyField(User, related_name="thread_likes",
                                    blank=True)
     
