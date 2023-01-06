@@ -27,7 +27,7 @@ class Thread(models.Model):
         ordering = ['-post_date']
 
     def __str__(self):
-        return self.title
+        return f"{self.author}'s {self.make} {self.model}"
 
     def number_of_likes(self):
         """ Returns number of likes """
