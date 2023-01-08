@@ -1,16 +1,17 @@
 from django.db import models
-from django.contrib.auth.models import  User
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Thread(models.Model):
     """ Build Thread model """
-    year = models.PositiveSmallIntegerField()
+    year = models.IntegerField()
     make = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, 
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="build_threads")
     updated_date = models.DateTimeField(auto_now=True)
     story = models.TextField()
@@ -22,7 +23,7 @@ class Thread(models.Model):
     feature_cap = models.CharField(max_length=250, blank=True)
     likes = models.ManyToManyField(User, related_name="thread_likes",
                                    blank=True)
-    
+
     class Meta:
         ordering = ['-post_date']
 
@@ -36,7 +37,8 @@ class Thread(models.Model):
 
 class Comment(models.Model):
     """ Thread user comments model """
-    thread = models.ForeignKey(Thread, on_delete=models.CASCADE, related_name='thread_comments')
+    thread = models.ForeignKey(Thread, on_delete=models.CASCADE,
+                               related_name='thread_comments')
     name = models.CharField(max_length=80)
     body = models.TextField()
     comment_date = models.DateTimeField(auto_now_add=True)

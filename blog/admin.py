@@ -13,6 +13,7 @@ class ThreadAdmin(SummernoteModelAdmin):
     list_filter = ('post_date', 'author', 'featured')
     search_fields = ['make', 'model', 'year']
 
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """ Admins Comment model features """
