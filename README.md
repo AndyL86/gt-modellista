@@ -24,6 +24,27 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 
 ## **User Experience (UX)**
 
+### **User Stories**
+A list of my user stories can be found [here](https://github.com/AndyL86/gt-modellista/issues)
+
+Unregistered site user:
+
+- As a user, I can understand the site's purpose as soon as I land on the homepage.
+- As a user, I can navigate the sites content without difficulty or confusion.
+- As a user, I can view a list of all the blog posts in the 'Build Threads', 'Scale Models' and 'Partners and Sponsors' sections of the site.
+- As a user, I can click on and view each blog post so I can view the content.
+- As a user, I can view how many likes each blog post has received.
+- As a user, I can the comments made on each blog post.
+- As a user, I can easily locate and visit the social media links.
+- As a user, I can sign up and register to the site.
+
+Regsitered site user:
+
+- As a user, I can perform the same actions as an unregistered site user.
+- As a user, I can log in to allow me to create content and interact with the community.
+- As a user, I can easily create a new blog post in the 'Build Threads' and 'Scale Models' sections of the site.
+- As a user, I can like/unlike blog posts 
+
 ## **Design**
 
 ### **Wireframes**
