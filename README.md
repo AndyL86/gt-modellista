@@ -33,17 +33,30 @@ Unregistered site user:
 - As a user, I can navigate the sites content without difficulty or confusion.
 - As a user, I can view a list of all the blog posts in the 'Build Threads', 'Scale Models' and 'Partners and Sponsors' sections of the site.
 - As a user, I can click on and view each blog post so I can view the content.
+- As a user, I can view 'Featured Build Threads'.
 - As a user, I can view how many likes each blog post has received.
-- As a user, I can the comments made on each blog post.
+- As a user, I can view the comments made on each blog post.
 - As a user, I can easily locate and visit the social media links.
 - As a user, I can sign up and register to the site.
+- As a user, I can easily contact the site's Admin through the 'Contact Us' page.
 
 Regsitered site user:
 
 - As a user, I can perform the same actions as an unregistered site user.
 - As a user, I can log in to allow me to create content and interact with the community.
 - As a user, I can easily create a new blog post in the 'Build Threads' and 'Scale Models' sections of the site.
-- As a user, I can like/unlike blog posts 
+- As a user, I can edit/delete blog posts I have created.
+- As a user, I can like/unlike blog posts.
+- As a user, I can post comments on blog posts.
+- As a user, I can edit/delete my comments on blog posts.
+- As a user, I can view a list of the posts I have previously liked.
+
+Site Admin/Superuser:
+
+- As a user, I can perform the same functionalities as unregistered and registered users.
+- As a user, I can create, edit and delete blog posts and post content to allow control over inappropriate content.
+- As a user, I can manage the Build Threads feature functionality to maintain control over blog posts that are 'Featured Build Threads'.
+- As a user, I can publish articles in the 'Sponsors and Partners' section of the site.
 
 ## **Design**
 
