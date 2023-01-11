@@ -3,7 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.ThreadList.as_view(), name='home'),
+    path('', views.Home, name='home'),
     path('about/', views.About, name='about'),
     path('blogs/', views.BlogList, name='blogs'),
+    path('threads/', views.ThreadList, name='threads')
 ]
