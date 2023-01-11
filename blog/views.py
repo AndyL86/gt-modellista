@@ -8,3 +8,8 @@ class ThreadList(generic.ListView):
     queryset = Thread.objects.order_by('-post_date')
     template_name = 'index.html'
     paginate_by = 6
+
+
+def About(request):
+    # return response
+    return render(request, "about.html")
