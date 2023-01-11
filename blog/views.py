@@ -9,6 +9,9 @@ class ThreadList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
+def BlogList(request):
+    # return response
+    return render(request, "blog-select.html")
 
 def About(request):
     # return response
