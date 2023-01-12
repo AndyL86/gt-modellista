@@ -14,8 +14,8 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
     * [Colours](#colours)
     * [Typography](#typography)
     * [Media](#media)
-    * [Database Schema](#database-schema)
     * [Wireframes](#wireframes)
+    * [Database Schema](#database-schema)
  - [**Features**](#features)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
@@ -25,7 +25,6 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 ## **User Experience (UX)**
 
 ### **User Stories**
-A list of my user stories can be found [here](https://github.com/AndyL86/gt-modellista/issues)
 
 Unregistered site user:
 
@@ -58,7 +57,29 @@ Site Admin/Superuser:
 - As a user, I can manage the Build Threads feature functionality to maintain control over blog posts that are 'Featured Build Threads'.
 - As a user, I can publish articles in the 'Sponsors and Partners' section of the site.
 
+### **Agile Methodology**
+
+For planning the developement and implementation of GT Modellista, a project kanban board was used as an Agile Tool through Github. This project board utilised issues as 'User Stories', a link can be found [here](https://github.com/AndyL86/gt-modellista/issues).
+
+To help define the functionalities and prioritise key features, these 'User Stories' were broken down into 3 categories of importance; 'Must Have', 'Should Have' and 'Could Have'.
+
+'Must Have' represents a feature or functionality that is essential to the site, 'Should Have' is a defined requirement needed for the site and 'Could Have' is determined to be optional.
+
+### **The Scope**
+
+#### **The Site's Main Goals:**
+- To provide users with a user-friendly and positive experience when using GT Modellista.
+- To provide users with a clear understanding of the site's purpose.
+- To provide controlled functionality based on a user's permissions.
+- To provide user's with a profile that allows them to manage their own content.
+
 ## **Design**
+
+### **Colours**
+
+### **Typography**
+
+### **Media**
 
 ### **Wireframes**
 Wireframes for each page are linked here:
@@ -95,6 +116,26 @@ Wireframes for each page are linked here:
 ![Database Schema](docs/read-me/data-schema.png)
 
 ## **Features**
+
+### **Home Page**
+
+### **About Page**
+
+### **Blog Categories Page**
+
+### **Build Thread Page**
+
+### **Build Thread Post**
+
+### **Diescasts Page**
+
+### **Diecasts Post**
+
+### **Partners and Sponsors Page**
+
+### **Partners and Sponsors Post**
+
+
 
 ## **Testing**
 
