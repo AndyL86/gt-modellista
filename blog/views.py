@@ -23,3 +23,11 @@ def BlogList(request):
 def About(request):
     # return response
     return render(request, "about.html")
+
+
+def Login(request):
+    return render(request, "login.html")
+
+
+def Register(request):
+    return render(request, "register.html")
