@@ -1,9 +1,10 @@
+body {
+    padding-top: 70px;
+}
 .header-bg {
-    padding-top: 65px;
     background-color: rgb(7, 3, 29);
 }
 
 .about-bg {
-    padding-top: 65px;
     background-color: blue;
 }

@@ -8,11 +8,11 @@ def Home(request):
     return render(request, "index.html")
 
 
-# class ThreadList(generic.ListView):
-#     model = Thread
-#     queryset = Thread.objects.order_by('-post_date')
-#     template_name = 'blog-list-gtm.html'
-#     paginate_by = 6
+class ThreadList(generic.ListView):
+    model = Thread
+    queryset = Thread.objects.order_by('-post_date')
+    template_name = 'blog-list-gtm.html'
+    paginate_by = 6
 
 
 def BlogList(request):
