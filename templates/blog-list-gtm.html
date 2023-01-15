@@ -16,18 +16,28 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-sm-6 mt-3 left">
-            {% for thread in thread_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h2>
-                    <img src="url('{{ thread.thread_image.url }}')" alt=""> 
-                    <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
-                    <p class="card-text"></p>
+            <div class="row">
+                {% for thread in thread_list %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h2>
+                        <img class="card-img-top" src=" {{ thread.thread_image.url }}" alt="">
+                        <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
+                        <i class="far fa-heart"></i>{{ thread.likes }}
+                        <p class="card-text"></p>
+                    </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                </div>
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
 
+{% if is_paginated %}
+    {% include "pagination.html" %}
+{% endif %}
 {% endblock %}
