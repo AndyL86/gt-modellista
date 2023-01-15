@@ -56,3 +56,7 @@ def Register(request):
 
 def Contact(request):
     return render(request, "contact.html")
+
+
+def Partners(request):
+    return render(request, "partners.html")
