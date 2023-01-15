@@ -1,8 +1,10 @@
 body {
     padding-top: 70px;
 }
-.header-bg {
-    background-color: rgb(7, 3, 29);
+
+
+.header-bg{
+    height: 250px;
 }
 
 .about-bg {
