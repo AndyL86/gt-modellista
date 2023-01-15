@@ -17,10 +17,10 @@ class ThreadList(generic.ListView):
 
 class ThreadDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Thread.objects.filter(status=1)
+    def get(self, request, slug):
+        queryset = Thread.objects.all()
         thread = get_object_or_404(queryset, slug=slug)
-        comments = thread.thread_comments.order_by(comment_date)
+        comments = thread.thread_comments.order_by('comment_date')
         liked = False
         if thread.likes.filter(id=self.request.user.id).exists():
             liked = True
