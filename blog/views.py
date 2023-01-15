@@ -52,3 +52,7 @@ def Login(request):
 
 def Register(request):
     return render(request, "register.html")
+
+
+def Contact(request):
+    return render(request, "contact.html")

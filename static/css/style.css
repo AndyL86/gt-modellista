@@ -8,3 +8,7 @@ body {
 .about-bg {
     background-color: blue;
 }
+
+.list-image {
+    max-width: 100%;
+}

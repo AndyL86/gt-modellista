@@ -9,5 +9,6 @@ urlpatterns = [
     path('blogs/', views.BlogList, name='blogs'),
     path('login/', views.Login, name='login'),
     path('register/', views.Register, name='register'),
+    path('contact/', views.Contact, name='contact'),
     path('<slug:slug>/', views.ThreadDetail.as_view(), name="thread_detail")
 ]

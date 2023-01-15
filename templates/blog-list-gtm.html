@@ -23,7 +23,7 @@
                         <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h2>
                         <!-- <img class="card-img-top" src=" {{ thread.thread_image.url }}" alt=""> -->
                         <a href="{% url 'thread_detail' thread.slug %}" target="_blank">
-                            <img src=" {{ thread.thread_image.url }}" alt="">
+                            <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
                         </a>
                         <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
                         <i class="far fa-heart"></i>{{ thread.likes }}
