@@ -8,5 +8,6 @@ urlpatterns = [
     path('about/', views.About, name='about'),
     path('blogs/', views.BlogList, name='blogs'),
     path('login/', views.Login, name='login'),
-    path('register/', views.Register, name='register')
+    path('register/', views.Register, name='register'),
+    path('<slug:slug>/', views.ThreadDetail.as_view(), name="thread_detail")
 ]
