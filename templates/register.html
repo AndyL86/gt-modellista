@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
-{% block content %}
-
 {% load static %}
+{% load i18n %}
+
+{% block content %}
 
 <section>
     <div class="container px-5">
@@ -42,7 +43,8 @@
                             <label for="password">Re-enter your Password:</label>
                         </div>
                         <!-- Submit success message-->
-                        <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Register</button></div>
+                        <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled"
+                                id="submitButton" type="submit">Register</button></div>
                     </form>
                 </div>
             </div>
