@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

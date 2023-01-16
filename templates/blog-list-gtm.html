@@ -13,11 +13,11 @@
     </div>
 </header>
 <main>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <!-- Blog Entries Column -->
-            <div class="col-sm-6 mt-3 left">
-                {% for thread in thread_list %}
+            {% for thread in thread_list %}
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
@@ -30,11 +30,9 @@
                         <i class="far fa-heart"></i>{{ thread.likes }}
                         <p class="card-text"></p>
                     </div>
-                    {% if forloop.counter|divisibleby:2 %}
                 </div>
-                    {% endif %}
-                    {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </main>
