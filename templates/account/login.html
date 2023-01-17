@@ -9,8 +9,9 @@
     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
         <div class="text-center mb-5">
             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-            <h1 class="fw-bolder">Log In</h1>
-            <p class="lead fw-normal text-muted mb-0">If you do not have an account you can register HERE</p>
+            <h1 class="fw-bolder">{% trans "Log In" %}</h1>
+            <p class="lead fw-normal text-muted mb-0">{% blocktrans %}If you do not have an account you can register <a
+                    href="{{ signup_url }}">HERE</a>{% endblocktrans %}</p>
         </div>
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
@@ -25,6 +26,8 @@
                     <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Log
                         In</button>
                 </form>
-
-
-                {% endblock %}
+            </div>
+        </div> 
+    </div>
+</div>   
+{% endblock %}
