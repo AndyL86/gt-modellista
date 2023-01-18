@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Thread
+from .forms import CommentForm
 
 
 def Home(request):
@@ -31,8 +32,9 @@ class ThreadDetail(View):
             {
               "thread": thread,
               "comments": comments,
-              "liked": liked
-            }
+              "liked": liked,
+              "comment_form": CommentForm()
+            },
         )
 
 

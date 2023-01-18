@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
 {% load static %}
 
 <div class="container px-5 my-5">
@@ -17,8 +18,23 @@
     </div>
     <div class="row gx-5">
         <div class="col-12"><img class="img-fluid rounded-3 mb-5" src=" {{ thread.thread_image.url }}"
-                alt="..." /></div>
+                alt="..." />
+            </div>
+    </div>
+    <div class="col-md-4 card">
+        <div class="card-body">
+            {% if user.is_authenticated %}
+            <h3>Leave a comment</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit">Submit comment</button>
+            </form>
 
+            {% endif %}
+
+        </div>
     </div>
 </div>
 </div>
