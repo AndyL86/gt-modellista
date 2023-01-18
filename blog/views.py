@@ -32,6 +32,39 @@ class ThreadDetail(View):
             {
               "thread": thread,
               "comments": comments,
+              "commented": False,
+              "liked": liked,
+              "comment_form": CommentForm()
+            },
+        )
+
+
+    def post(self, request, slug):
+        queryset = Thread.objects.all()
+        thread = get_object_or_404(queryset, slug=slug)
+        comments = thread.thread_comments.order_by('comment_date')
+        liked = False
+        if thread.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.thread = thread
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            'thread_detail.html',
+            {
+              "thread": thread,
+              "comments": comments,
+              "commented": True,
               "liked": liked,
               "comment_form": CommentForm()
             },
