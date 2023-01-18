@@ -38,7 +38,6 @@ class ThreadDetail(View):
             },
         )
 
-
     def post(self, request, slug):
         queryset = Thread.objects.all()
         thread = get_object_or_404(queryset, slug=slug)
