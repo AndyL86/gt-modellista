@@ -17,29 +17,47 @@
         </div>
     </div>
     <div class="row gx-5">
-        <div class="col-12"><img class="img-fluid rounded-3 mb-5" src=" {{ thread.thread_image.url }}"
-                alt="..." />
-            </div>
+        <div class="col-12"><img class="img-fluid rounded-3 mb-5" src=" {{ thread.thread_image.url }}" alt="..." />
+        </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.updated_date }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
+    <div class="col-1">
+        {% if user.is_authenticated %}
+        <form action="{% url 'thread_like' thread.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
+                    class="far fa-heart"></i></button>
+            {% else %}
+            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
+                    class="fas fa-heart"></i></button>
+            {% endif %}
+        </form>
+        {% else %}
+        <span class="text_secondary"><i class="far fa-heart"></i></span>
+        {% endif %}
+        <span class="text_secondary">{{ thread.number_of_likes }}</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col card mb-4">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ user.username }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.updated_date }}
+                            </span> wrote:
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-    <div class="col-md-4 card">
-        <div class="card-body">
+        <div class="col card mb-4"">
+            <div class=" card-body">
             {% if commented %}
             <div class="alert alert-success" role="alert">
                 Please wait while we approve your comment

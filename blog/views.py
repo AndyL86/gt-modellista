@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Thread
 from .forms import CommentForm
 
@@ -69,6 +70,17 @@ class ThreadDetail(View):
             },
         )
 
+class ThreadLike(View):
+    # Post like functionality
+    def post(self, request, slug):
+        thread = get_object_or_404(Thread, slug=slug)
+
+        if thread.likes.filter(id=request.user.id).exists():
+            thread.likes.remove(request.user)
+        else:
+            thread.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('thread_detail', args=[slug]))
 
 def BlogList(request):
     # return response
