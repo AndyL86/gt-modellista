@@ -69,6 +69,18 @@
     </div>
   </nav>
 
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+                {{ message | safe}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
   {% block content %}
   <!-- Content Goes here -->
@@ -96,9 +108,16 @@
       © 2023 Copyright:
       <a class="text-white" href="#">GT Modellista</a>
     </div>
-    <!-- Copyright -->
   </footer>
 
+  <!-- Alert Message auto dismiss -->
+  <script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 2500);
+</script>
   <!-- Bootstrap JS  Script -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
