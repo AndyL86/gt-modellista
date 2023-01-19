@@ -5,9 +5,20 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
-{% if user.is_authenticated %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="text-center mb-5">
+                <form action="POST" enctype="multipart/form-data">
+                    <h3>Create your thread</h3>
+                    {% csrf_token %}
+                    {{ thread_form|crispy }}
+                    <button class="btn" type="submit" value="Save">Create Thread</button>
+                </form>
+    </div>
+</div>
 
 
-{% else %}
 
 {% endblock %}
