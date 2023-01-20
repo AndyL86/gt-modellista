@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import CreateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .models import Thread
 from .forms import ThreadForm, CommentForm
 
@@ -73,37 +74,46 @@ class ThreadDetail(View):
         )
 
 
-class AddThread(CreateView):
+class AddThread(SuccessMessageMixin,CreateView):
 
-    def get(self, request):
+    # def get(self, request):
 
-        return render(request, "create_thread.html", {"thread_form":
-                      ThreadForm()})
+    #     return render(request, "create_thread.html", {"thread_form":
+    #                   ThreadForm()})
 
-    def post(self, request):
+    # def post(self, request):
 
-        thread_form = ThreadForm(request.POST, request.FILES)
+    #     thread_form = ThreadForm(request.POST, request.FILES)
 
-        if thread_form.is_valid():
-            thread = thread_form.save(commit=False)
-            thread.author = request.user
-            thread.slug = slugify('-'.join([str(thread.author),
-                                  str(thread.year),
-                                           thread.make, thread.model]),
-                                  allow_unicode=False)
-            thread.save()
-            messages.success(request,
-                             'Build Thread Successfully Uploaded')
-            return redirect('thread-detail.html')
-        else:
-            thread_form = ThreadForm()
+    #     if thread_form.is_valid():
+    #         thread = thread_form.save(commit=False)
+    #         thread.author = request.user
+    #         thread.slug = slugify('-'.join([str(thread.author),
+    #                               str(thread.year),
+    #                                        thread.make, thread.model]),
+    #                               allow_unicode=False)
+    #         thread.save()
+    #         messages.success(request,
+    #                          'Build Thread Successfully Uploaded')
+    #         return redirect('thread-detail.html')
+    #     else:
+    #         thread_form = ThreadForm()
 
-            return render(
-                request, "create_thread.html",
-                {
-                    "thread_form": thread_form
-                },
-            )
+    #         return render(
+    #             request, "create_thread.html",
+    #             {
+    #                 "thread_form": thread_form
+    #             },
+    #         )
+    model = Thread
+    form_class = ThreadForm
+    template_name = 'create_thread.html'
+    success_message = 'Thread Successfully Added'
+    success_url = reverse_lazy('thread_detail')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class ThreadLike(View):
