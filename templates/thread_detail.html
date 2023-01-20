@@ -10,9 +10,15 @@
         <div class="col-lg-6">
             <div class="text-center mb-5">
                 <h1 class="fw-bolder">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h1>
-                <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    similique, ducimus ut alias sit accusamus illum, asperiores deserunt dolorum quaerat qui! Ab,
-                    quisquam explicabo magni dolores unde beatae quam a.</p>
+                <h2 class="text-center">Story:</h2>
+                <div>
+                    <p>{{ thread.story | safe }}</p>
+                </div>
+                <hr>
+                <h2 class="text-center">Modifications:</h2>
+                <div>
+                    {{ thread.modifications | safe }}
+                </div>
             </div>
         </div>
     </div>

@@ -73,12 +73,13 @@ class ThreadDetail(View):
         )
 
 
-
 class AddThread(CreateView):
 
     def get(self, request):
-        
-        return render(request, "create_thread.html", {"thread_form": ThreadForm()})
+
+        return render(request, "create_thread.html", {"thread_form":
+                      ThreadForm()})
+
     def post(self, request):
 
         thread_form = ThreadForm(request.POST, request.FILES)
@@ -86,9 +87,10 @@ class AddThread(CreateView):
         if thread_form.is_valid():
             thread = thread_form.save(commit=False)
             thread.author = request.user
-            thread.slug = slugify('-'.join([str(thread.author), str(thread.year),
+            thread.slug = slugify('-'.join([str(thread.author),
+                                  str(thread.year),
                                            thread.make, thread.model]),
-                                 allow_unicode=False)
+                                  allow_unicode=False)
             thread.save()
             messages.success(request,
                              'Build Thread Successfully Uploaded')
@@ -101,7 +103,7 @@ class AddThread(CreateView):
                 {
                     "thread_form": thread_form
                 },
-            )    
+            )
 
 
 class ThreadLike(View):
