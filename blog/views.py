@@ -73,8 +73,11 @@ class ThreadDetail(View):
         )
 
 
+
 class AddThread(CreateView):
+
     def get(self, request):
+        
         return render(request, "create_thread.html", {"thread_form": ThreadForm()})
     def post(self, request):
 
