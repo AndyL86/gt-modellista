@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import CreateView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
 from .models import Thread
 from .forms import ThreadForm, CommentForm
@@ -72,10 +73,10 @@ class ThreadDetail(View):
         )
 
 
-class AddThread(View):
+class AddThread(CreateView):
     def get(self, request):
         return render(request, "create_thread.html", {"thread_form": ThreadForm()})
-    def post(self,request):
+    def post(self, request):
 
         thread_form = ThreadForm(request.POST, request.FILES)
 
