@@ -7,9 +7,9 @@ from .models import Thread, Comment
 class ThreadAdmin(SummernoteModelAdmin):
     """Admins Thread model features"""
     summernote_fields = ('story', 'modifications')
-    list_display = ('author', 'year', 'make', 'model', 'post_date',
+    list_display = ('year', 'make', 'model', 'post_date',
                     'featured')
-    prepopulated_fields = {'slug': ('author', 'year', 'make', 'model')}
+    prepopulated_fields = {'slug': ('year', 'make', 'model')}
     list_filter = ('post_date', 'author', 'featured')
     search_fields = ['make', 'model', 'year']
 
