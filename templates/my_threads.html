@@ -5,51 +5,54 @@
 {% load static %}
 
 <!-- Header-->
-<header class="masthead d-flex align-items-center header-bg">
+<section class="masthead d-flex align-items-center header-bg">
     <div class="container px-4 px-lg-5 text-center">
         <h1 class="mb-1">My Build Threads</h1>
         <h3 class="mb-5"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></h3>
         <a class="btn btn-primary btn-xl" href="{% url 'create_thread' %}">Create a Thread</a>
     </div>
-</header>
+</section>
 <main>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <!-- Blog Entries Column -->
-            {% for thread in page_obj %}
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
-                        </h2>
-                        <a href="{% url 'thread_detail' thread.slug %}">
-                            <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
-                        <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
-                        {% if user.is_authenticated %}
-                        <form action="{% url 'thread_like' thread.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if liked %}
-                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                                    class="far fa-heart"></i></button>
-                            {% else %}
-                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                                    class="fas fa-heart"></i></button>
-                            {% endif %}
-                        </form>
-                        {% else %}
-                        <span class="text_secondary"><i class="far fa-heart"></i></span>
-                        {% endif %}
-                        <span class="text_secondary">{{ thread.number_of_likes }}</span>
-                        <p class="card-text"></p>
-                        </a>
-                        <div class="mt-1">
-                            <form class="me-1" action="{% url 'edit_thread' thread.id %}" method="get"><button class="btn btn-success">Edit</button></form>
+            <div class="col my-threads">
+                <!-- Blog Entries Column -->
+                {% for thread in page_obj %}
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
+                            </h2>
+                            <a href="{% url 'thread_detail' thread.slug %}">
+                                <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
+                                <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
+                                {% if user.is_authenticated %}
+                                <form action="{% url 'thread_like' thread.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="userthread_id" value="{{thread.slug}}"
+                                        class="btn-like"><i class="far fa-heart"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="userthread_id" value="{{thread.slug}}"
+                                        class="btn-like"><i class="fas fa-heart"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span class="text_secondary"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <span class="text_secondary">{{ thread.number_of_likes }}</span>
+                                <p class="card-text"></p>
+                            </a>
+                            <div>
+                                <form class="me-1" action="{% url 'edit_thread' thread.id %}" method="get"><button
+                                        class="btn btn-success">Edit</button></form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
 </main>
 
 
