@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from django.contrib import messages
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator
 from django.urls import reverse_lazy
-from .models import Thread
+from .models import Thread, Comment
 from .forms import ThreadForm, CommentForm
 
 
@@ -76,17 +77,55 @@ class ThreadDetail(View):
         )
 
 
-class AddThread(CreateView):
+class UserThreads(generic.ListView):
+    def get(self, request):
+        """What happens for a GET request"""
+        if request.user.is_authenticated:
+            threads = Thread.objects.filter(author=request.user)
+            paginator = Paginator(threads, 4)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(request, 'my_threads.html', {'page_obj': page_obj})
+        else:
+            return render(request, 'my_threads.html')
 
+
+class AddThread(View):
+
+    def get(self, request):
+
+        return render(request, "create_thread.html", {"thread_form": ThreadForm()})
+    
+    def post(self, request):
+
+        thread_form = ThreadForm(request.POST, request.FILES)
+
+        if thread_form.is_valid():
+            thread = thread_form.save(commit=False)
+            thread.author = request.user
+            thread.slug = slugify('-'.join([str(thread.author),
+                                           str(thread.make), str(thread.model)]),
+                                 allow_unicode=False)
+            thread.save()
+            messages.success(request,
+                             'The build has been created successfully')
+            return redirect('my_threads')
+        else:
+            thread_form = ThreadForm()
+
+            return render(
+                request, "create_thread.html",
+                {
+                    "thread_form": thread_form
+                },
+            )
+
+
+class EditThread(UpdateView):
     model = Thread
+    template_name = 'edit_thread.html'
     form_class = ThreadForm
-    template_name = 'create_thread.html'
-    success_url = reverse_lazy('thread-list-gtm')
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
+    success_url = reverse_lazy('my_threads')
 
 class ThreadLike(View):
     """Post like functionality"""

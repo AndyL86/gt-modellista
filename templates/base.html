@@ -46,6 +46,9 @@
           <li><a class="dropdown-item" href="{% url 'contact' %}">Contact Us</a></li>
           {% if user.is_authenticated %}
           <li>
+            <a class="nav-item" href="{% url 'my_threads' %}">My Build Threads</a>
+          </li>
+          <li>
             <a class="nav-item" href="{% url 'account_logout' %}">Logout</a>
           </li>
           {% else %}

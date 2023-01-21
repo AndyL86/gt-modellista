@@ -5,7 +5,7 @@
 {% load crispy_forms_tags %}
 
 
-{% if user.is_authenticated %}
+{% if user.is_authenticated and user.id == thread.author.id %}
 
 <div class="container">
     <div class="container px-5">
@@ -13,10 +13,10 @@
             <div class="text-center mb-5">
                 <div class="bg-primary bg-gradient text-white rounded-3 mb-3"></div>
                 <form method="post" enctype="multipart/form-data">
-                    <h3>Create your thread</h3>
+                    <h3>Edit your thread</h3>
                     {% csrf_token %}
-                    {{ thread_form|crispy }}
-                    <button class="btn" type="submit">Create Thread</button>
+                    {{ form.as_p }}
+                    <button class="btn" type="submit">Save</button>
                 </form>
             </div>
         </div>
