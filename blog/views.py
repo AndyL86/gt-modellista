@@ -83,9 +83,9 @@ class AddThread(CreateView):
     template_name = 'create_thread.html'
     success_url = reverse_lazy('thread-list-gtm')
 
-    """def form_valid(self, form):
+    def form_valid(self, form):
         form.instance.author = self.request.user
-        return super().form_valid(form)"""
+        return super().form_valid(form)
 
 
 class ThreadLike(View):
