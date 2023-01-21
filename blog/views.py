@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import CreateView
-from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Thread
@@ -74,37 +73,8 @@ class ThreadDetail(View):
         )
 
 
-class AddThread(SuccessMessageMixin,CreateView):
+class AddThread(CreateView):
 
-    # def get(self, request):
-
-    #     return render(request, "create_thread.html", {"thread_form":
-    #                   ThreadForm()})
-
-    # def post(self, request):
-
-    #     thread_form = ThreadForm(request.POST, request.FILES)
-
-    #     if thread_form.is_valid():
-    #         thread = thread_form.save(commit=False)
-    #         thread.author = request.user
-    #         thread.slug = slugify('-'.join([str(thread.author),
-    #                               str(thread.year),
-    #                                        thread.make, thread.model]),
-    #                               allow_unicode=False)
-    #         thread.save()
-    #         messages.success(request,
-    #                          'Build Thread Successfully Uploaded')
-    #         return redirect('thread-detail.html')
-    #     else:
-    #         thread_form = ThreadForm()
-
-    #         return render(
-    #             request, "create_thread.html",
-    #             {
-    #                 "thread_form": thread_form
-    #             },
-    #         )
     model = Thread
     form_class = ThreadForm
     template_name = 'create_thread.html'
