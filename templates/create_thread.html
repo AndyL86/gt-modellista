@@ -2,6 +2,7 @@
 
 {% block content %}
 {% load static %}
+{% load cloudinary %}
 {% load crispy_forms_tags %}
 
 
@@ -11,11 +12,12 @@
         <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
             <div class="text-center mb-5">
                 <div class="bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                <form action="POST" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data">
                     <h3>Create your thread</h3>
                     {% csrf_token %}
-                    {{ form.create_thread|crispy }}
-                    <button class="btn" type="submit" value="Save">Create Thread</button>
+                    {{ form.media}}
+                    {{ form.as_p }}
+                    <button class="btn" type="submit">Create Thread</button>
                 </form>
             </div>
         </div>

@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Thread(models.Model):
@@ -11,8 +10,9 @@ class Thread(models.Model):
     make = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE,
-                               related_name="build_threads")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="thread_detail"
+    )
     updated_date = models.DateTimeField(auto_now=True)
     story = models.TextField()
     modifications = models.TextField()

@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import CreateView
+from django.contrib import messages
+from django.utils.text import slugify
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Thread
@@ -8,7 +10,6 @@ from .forms import ThreadForm, CommentForm
 
 
 def Home(request):
-    # return response
     return render(request, "index.html")
 
 
@@ -57,12 +58,14 @@ class ThreadDetail(View):
             comment = comment_form.save(commit=False)
             comment.thread = thread
             comment.save()
+            messages.success(request, 'Comment added successfully')
         else:
             comment_form = CommentForm()
+            messages.error(request, 'Error posting comment')
 
         return render(
             request,
-            'thread_detail.html',
+            "thread_detail.html",
             {
               "thread": thread,
               "comments": comments,
@@ -76,14 +79,17 @@ class ThreadDetail(View):
 class AddThread(CreateView):
 
     model = Thread
-    fields = ['year', 'make', 'model', 'thread_image', 'story',
-                  'modifications', 'excerpt']
+    form_class = ThreadForm
+    template_name = 'create_thread.html'
+    success_url = reverse_lazy('thread-list-gtm')
 
-
+    """def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)"""
 
 
 class ThreadLike(View):
-    # Post like functionality
+    """Post like functionality"""
     def post(self, request, slug):
         thread = get_object_or_404(Thread, slug=slug)
 
@@ -96,12 +102,12 @@ class ThreadLike(View):
 
 
 def BlogList(request):
-    # return response
+    """return response"""
     return render(request, "blog-select.html")
 
 
 def About(request):
-    # return response
+    """return response"""
     return render(request, "about.html")
 
 

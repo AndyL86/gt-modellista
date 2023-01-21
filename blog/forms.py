@@ -10,7 +10,7 @@ class ThreadForm(forms.ModelForm):
     class Meta:
         model = Thread
         fields = ('year', 'make', 'model', 'thread_image', 'story',
-                  'modifications', 'excerpt')
+                  'modifications')
 
         widgets = {
             'story': SummernoteWidget(),
