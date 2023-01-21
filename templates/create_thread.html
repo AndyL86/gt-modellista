@@ -14,7 +14,7 @@
                 <form action="POST" enctype="multipart/form-data">
                     <h3>Create your thread</h3>
                     {% csrf_token %}
-                    {{ thread_form|crispy }}
+                    {{ form.create_thread|crispy }}
                     <button class="btn" type="submit" value="Save">Create Thread</button>
                 </form>
             </div>

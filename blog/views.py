@@ -76,14 +76,10 @@ class ThreadDetail(View):
 class AddThread(CreateView):
 
     model = Thread
-    form_class = ThreadForm
-    template_name = 'create_thread.html'
-    success_message = 'Thread Successfully Added'
-    success_url = reverse_lazy('thread_detail')
+    fields = ['year', 'make', 'model', 'thread_image', 'story',
+                  'modifications', 'excerpt']
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+
 
 
 class ThreadLike(View):
