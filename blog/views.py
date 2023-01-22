@@ -94,8 +94,9 @@ class AddThread(View):
 
     def get(self, request):
 
-        return render(request, "create_thread.html", {"thread_form": ThreadForm()})
-    
+        return render(request, "create_thread.html", {"thread_form":
+                                                      ThreadForm()})
+
     def post(self, request):
 
         thread_form = ThreadForm(request.POST, request.FILES)
@@ -104,8 +105,9 @@ class AddThread(View):
             thread = thread_form.save(commit=False)
             thread.author = request.user
             thread.slug = slugify('-'.join([str(thread.author),
-                                           str(thread.make), str(thread.model)]),
-                                 allow_unicode=False)
+                                           str(thread.make),
+                                           str(thread.model)]),
+                                  allow_unicode=False)
             thread.save()
             messages.success(request,
                              'The build has been created successfully')
@@ -126,6 +128,15 @@ class EditThread(UpdateView):
     template_name = 'edit_thread.html'
     form_class = ThreadForm
     success_url = reverse_lazy('my_threads')
+
+
+def DeleteThread(request, thread_id):
+    """ View to Delete Thread post """
+    thread = get_object_or_404(Thread, id=thread_id)
+    thread.delete()
+    messages.success(request, 'Build Thread Deleted Successfully')
+    return redirect(reverse('my_threads'))
+
 
 class ThreadLike(View):
     """Post like functionality"""

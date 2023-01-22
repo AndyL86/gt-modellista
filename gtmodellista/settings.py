@@ -69,6 +69,18 @@ MESSAGE_TAGS = {
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    'height': '300px',
+    'toolbar': [
+        ['font', ['bold', 'underline', 'italic', 'clear']],
+        ['para', ['ul', 'ol']],
+        ['insert', ['link', 'picture', 'video']],
+    ]
+}
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
