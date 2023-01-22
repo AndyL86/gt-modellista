@@ -14,12 +14,11 @@ def Home(request):
     return render(request, "index.html")
 
 
-class ThreadList(generic.ListView):
-    """ View for rendering all build threads """
-    model = Thread
-    queryset = Thread.objects.order_by('-post_date')
-    template_name = 'blog_lists.html'
-    paginate_by = 6
+class ThreadList(View):
+    def get(self, request):
+        thread = Thread.objects.all()
+        paginator = Paginator(recipes, 6)  # Show 6 Recipes per page.
+        return render(request, 'blog_lists.html')
 
 
 class ThreadDetail(View):
