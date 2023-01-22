@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
 
 .header-bg{
     height: 250px;
@@ -11,6 +9,10 @@
 
 .list-image {
     max-width: 100%;
+}
+
+.blog-card {
+  height: auto;
 }
 
 .my-threads {

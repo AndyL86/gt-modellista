@@ -12,17 +12,17 @@
         <a class="btn btn-primary btn-xl" href="{% url 'create_thread' %}">Create a Thread</a>
     </div>
 </section>
+<!-- Blog list columns -->
 <main>
     <div class="container">
         <div class="row">
-            <div class="col my-threads">
-                <!-- Blog Entries Column -->
-                {% for thread in page_obj %}
-                <div class="card-group">
-                    <div class="card">
+            {% for thread in page_obj %}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body blog-card">
+                        <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
+                        </h2>
                         <div class="card-body">
-                            <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
-                            </h2>
                             <a href="{% url 'thread_detail' thread.slug %}">
                                 <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
                                 <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
@@ -43,16 +43,17 @@
                                 <span class="text_secondary">{{ thread.number_of_likes }}</span>
                                 <p class="card-text"></p>
                             </a>
-                            <div>
-                                <form class="me-1" action="{% url 'edit_thread' thread.id %}" method="get"><button
-                                        class="btn btn-success">Edit</button></form>
-                            </div>
+                        </div>
+                        <div>
+                            <form class="me-1" action="{% url 'edit_thread' thread.id %}" method="get"><button
+                                    class="btn btn-success">Edit</button></form>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
+    </div>
 </main>
 
 
