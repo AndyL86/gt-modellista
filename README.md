@@ -30,20 +30,19 @@ Unregistered site user:
 
 - As a user, I can understand the site's purpose as soon as I land on the homepage.
 - As a user, I can navigate the sites content without difficulty or confusion.
-- As a user, I can view a list of all the blog posts in the 'Build Threads', 'Scale Models' and 'Partners and Sponsors' sections of the site.
+- As a user, I can view a list of all the blog posts in the 'Build Threads', 'Featured' and 'Partners' sections of the site.
 - As a user, I can click on and view each blog post so I can view the content.
 - As a user, I can view 'Featured Build Threads'.
 - As a user, I can view how many likes each blog post has received.
 - As a user, I can view the comments made on each blog post.
 - As a user, I can easily locate and visit the social media links.
 - As a user, I can sign up and register to the site.
-- As a user, I can easily contact the site's Admin through the 'Contact Us' page.
 
 Regsitered site user:
 
 - As a user, I can perform the same actions as an unregistered site user.
 - As a user, I can log in to allow me to create content and interact with the community.
-- As a user, I can easily create a new blog post in the 'Build Threads' and 'Scale Models' sections of the site.
+- As a user, I can easily create a new blog post in the 'Build Threads' section of the site.
 - As a user, I can edit/delete blog posts I have created.
 - As a user, I can like/unlike blog posts.
 - As a user, I can post comments on blog posts.
@@ -88,25 +87,20 @@ Wireframes for each page are linked here:
 
 [About Page](docs/read-me/about-page.png)
 
-[Blog Page](docs/read-me/blog-page.png)
-
 [Build Threads Page](docs/read-me/build-threads.png)
 
 [Create Build Thread](docs/read-me/create-build-thread.png)
 
 [Build Thread Posts](docs/read-me/view-build-thread-post.png)
 
-[Diecasts Page](docs/read-me/diecasts.png)
+FEATURED WIREFRAME
 
-[Create Diecasts Post](docs/read-me/create-diecasts.png)
+MY THREADS WIREFRAME
 
-[Diecasts Posts](docs/read-me/view-diecast-post.png)
+[Partners Page](docs/read-me/partners.png)
 
-[Partners and Sponsors Page](docs/read-me/partners.png)
+[Partnerss Posts](docs/read-me/view-partners-post.png)
 
-[Partners/Sponsors Posts](docs/read-me/view-partners-post.png)
-
-[Contact Us Page](docs/read-me/contact-us.png)
 
 [Signup Page](docs/read-me/signup-page.png)
 
