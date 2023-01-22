@@ -15,6 +15,7 @@ def Home(request):
 
 
 class ThreadList(generic.ListView):
+    """ View for rendering all build threads """
     model = Thread
     queryset = Thread.objects.order_by('-post_date')
     template_name = 'blog-list-gtm.html'
@@ -22,7 +23,7 @@ class ThreadList(generic.ListView):
 
 
 class ThreadDetail(View):
-
+    """ View for redering thread details """
     def get(self, request, slug):
         queryset = Thread.objects.all()
         thread = get_object_or_404(queryset, slug=slug)
@@ -79,7 +80,6 @@ class ThreadDetail(View):
 
 class UserThreads(generic.ListView):
     def get(self, request):
-        """What happens for a GET request"""
         if request.user.is_authenticated:
             threads = Thread.objects.filter(author=request.user)
             paginator = Paginator(threads, 4)
@@ -91,7 +91,7 @@ class UserThreads(generic.ListView):
 
 
 class AddThread(View):
-
+    """ View for user to create a build thread """
     def get(self, request):
 
         return render(request, "create_thread.html", {"thread_form":
@@ -124,13 +124,14 @@ class AddThread(View):
 
 
 class EditThread(UpdateView):
+    """ View to Edit Thread post """
     model = Thread
     template_name = 'edit_thread.html'
     form_class = ThreadForm
     success_url = reverse_lazy('my_threads')
 
 
-def DeleteThread(request, thread_id):
+def delete_thread(request, thread_id):
     """ View to Delete Thread post """
     thread = get_object_or_404(Thread, id=thread_id)
     thread.delete()
@@ -139,7 +140,7 @@ def DeleteThread(request, thread_id):
 
 
 class ThreadLike(View):
-    """Post like functionality"""
+    """ View for thread like functionality """
     def post(self, request, slug):
         thread = get_object_or_404(Thread, slug=slug)
 

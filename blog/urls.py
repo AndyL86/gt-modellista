@@ -14,10 +14,8 @@ urlpatterns = [
     path(
         'edit_thread/<int:pk>', views.EditThread.as_view(), name='edit_thread'
         ),
-    path(
-        'delete_thread/<int:thread_id>',
-        views.DeleteThread, name='delete_thread'
-        ),
+    path('delete_thread/<int:thread_id>/',
+         views.delete_thread, name='delete_thread'),
     path('<slug:slug>/', views.ThreadDetail.as_view(), name='thread_detail'),
     path('like/<slug:slug>', views.ThreadLike.as_view(), name='thread_like')
 ]
