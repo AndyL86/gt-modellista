@@ -18,7 +18,7 @@ class ThreadList(generic.ListView):
     """ View for rendering all build threads """
     model = Thread
     queryset = Thread.objects.order_by('-post_date')
-    template_name = 'blog-list-gtm.html'
+    template_name = 'blog_lists.html'
     paginate_by = 6
 
 
@@ -150,11 +150,6 @@ class ThreadLike(View):
             thread.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('thread_detail', args=[slug]))
-
-
-def BlogList(request):
-    """return response"""
-    return render(request, "blog-select.html")
 
 
 def About(request):
