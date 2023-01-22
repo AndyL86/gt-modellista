@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.Home, name='home'),
     path('about/', views.About, name='about'),
     path('partners/', views.Partners, name='partners'),
-    path('blog_lists/', views.ThreadList.as_view(), name='thread'),
+    path('blog_lists/', views.ThreadList.as_view(), name='blog_lists'),
     path('my_threads/', views.UserThreads.as_view(), name='my_threads'),
     path('create_thread/', views.AddThread.as_view(), name='create_thread'),
     path(
