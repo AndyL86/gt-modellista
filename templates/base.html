@@ -23,12 +23,17 @@
 
 <body>
   <!-- Navigation bar -->
-  <section class="top-nav fixed-top">
+  <section class="top-nav sticky-top navbar-bg">
       <a class="navbar-brand" href="#">
         <img src="https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674243570/gtm-logo_tn9gja.png" alt="" width="100"
           height="34">
       </a>
-    <ul class="navbar-nav justify-content-end nav-menu">
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu navbar-nav justify-content-end nav-menu">
       <li>
         <a class="nav-item active" aria-current="page" href="{% url 'home' %}">Home</a>
       </li>

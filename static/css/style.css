@@ -20,6 +20,10 @@
   display: flex;
 }
 
+.navbar-bg {
+  background-colour: #24272C;
+}
+
 .nav-menu {
   flex-direction: row;
 }
