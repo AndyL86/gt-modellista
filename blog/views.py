@@ -152,6 +152,16 @@ class ThreadLike(View):
         return HttpResponseRedirect(reverse('thread_detail', args=[slug]))
 
 
+class Featured(View):
+    
+    def get(self, request):
+        featured_threads = Thread.objects.filter(featured=True)[:2]
+        context = {
+            "featured_threads": featured_threads,
+        }
+        return render(request, 'featured.html', context)
+
+
 def About(request):
     """return response"""
     return render(request, "about.html")

@@ -2,8 +2,13 @@
   height: 250px;
 }
 
+.about-container {
+  background-color: #444;
+}
+
 .about-bg {
-  background-color: blue;
+  width: 100%;
+  height: auto;
 }
 
 .list-image {

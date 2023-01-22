@@ -52,7 +52,7 @@
       <li>
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"></a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Featured Threads</a></li>
+          <li><a class="dropdown-item" href="{% url 'featured' %}">Featured Threads</a></li>
           {% if user.is_authenticated %}
           <li>
             <a class="dropdown-item" href="{% url 'my_threads' %}">My Build Threads</a>
