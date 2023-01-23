@@ -17,6 +17,16 @@ h2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674423779/pexels-deane-bayas-9212878_f597ae.jpg");
 }
 
+.create-btn {
+  margin: auto;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(7, 7, 7);
+  background-color: #f7b91e;
+  border-style: solid;
+  border-color: rgb(7, 7, 7);
+  border-width: 4px;
+}
+
 .home-header-bg {
   height: 250px;
 }
