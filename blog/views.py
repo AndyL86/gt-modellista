@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import CreateView, UpdateView
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
@@ -131,11 +132,16 @@ class EditThread(UpdateView):
     success_url = reverse_lazy('my_threads')
 
 
-def delete_thread(request, thread_id):
+@login_required
+def delete_thread(request, pk):
     """ View to Delete Thread post """
-    thread = get_object_or_404(Thread, id=thread_id)
-    thread.delete()
-    messages.success(request, 'Build Thread Deleted Successfully')
+    print("hello")
+    thread = get_object_or_404(Thread, id=pk)
+    if thread.author.id == request.user.id:
+        thread.delete()
+        messages.success(request, 'Build Thread Deleted Successfully')
+    else:
+        messages.error(request, "Unauthorised action")
     return redirect(reverse('my_threads'))
 
 

@@ -1,3 +1,4 @@
+/* General styling */
 body {
   background-color: rgb(175, 169, 169);
 }
@@ -10,53 +11,7 @@ h2 {
   font-family: 'Roboto Slab', serif;
 }
 
-.list-header-img {
-  background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674423779/pexels-deane-bayas-9212878_f597ae.jpg");
-}
-
-.create-btn {
-  margin: auto;
-  font-family: 'Roboto Slab', serif;
-  color: rgb(7, 7, 7);
-  background-color: #f7b91e;
-  border-style: solid;
-  border-color: rgb(7, 7, 7);
-  border-width: 4px;
-}
-
-.home-header-bg {
-  height: 250px;
-}
-
-.about-container {
-  background-color: #444;
-}
-
-.about-bg {
-  width: 100%;
-  height: auto;
-}
-
-.list-image {
-  max-width: 100%;
-}
-
-.blog-card {
-  height: auto;
-}
-
-.my-threads {
-  text-align: center;
-  display: flex;
-}
-
-.edit-btn {
-  display: inline-flex;
-}
-
+/* Navigation styling */
 .nav-menu {
   flex-direction: row;
 }
@@ -68,9 +23,13 @@ h2 {
 .nav-item {
   display: block;
   padding: 0.5rem 1rem;
-  color: #f8f8ec;
+  color: rgb(201, 203, 204);
   text-decoration: none;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #f7b91e;
 }
 
 .top-nav {
@@ -145,6 +104,70 @@ h2 {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
+
+/* Blog List styling */
+.header-text {
+  text-align: center;
+  color: rgb(201, 203, 204);
+}
+
+.list-header-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674423779/pexels-deane-bayas-9212878_f597ae.jpg");
+}
+
+.create-btn {
+  margin: auto;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(7, 7, 7);
+  background-color: #f7b91e;
+  border-style: solid;
+  border-color: rgb(7, 7, 7);
+  border-width: 4px;
+}
+
+.list-image {
+  max-width: 100%;
+}
+
+.blog-card {
+  height: auto;
+}
+
+/* Home Page styling */
+.home-header-bg {
+  height: 250px;
+}
+
+/* About Page styling */
+.about-container {
+  background-color: #444;
+}
+
+.about-bg {
+  width: 100%;
+  height: auto;
+}
+
+/* My Threads Page styling */
+.my-thread-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674418447/pexels-supreet-8134647_sykbgv.jpg");
+}
+
+.my-threads {
+  text-align: center;
+  display: flex;
+}
+
+.edit-btn {
+  display: inline-flex;
+}
+
 
 @media (max-width: 700px) {
   .menu-button-container {

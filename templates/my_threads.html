@@ -5,13 +5,14 @@
 {% load static %}
 
 <!-- Header-->
-<section class="masthead d-flex align-items-center header-bg">
-    <div class="container px-4 px-lg-5 text-center">
+<section class="d-flex align-items-center header-bg my-thread-img">
+    <div class="container px-4 px-lg-5 text-center header-text">
         <h1 class="mb-1">My Build Threads</h1>
         <h3 class="mb-5"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></h3>
-        <a class="btn btn-primary btn-xl" href="{% url 'create_thread' %}">Create a Thread</a>
+        <a class="btn btn-primary btn-xl create-btn" href="{% url 'create_thread' %}">Create a Thread</a>
     </div>
 </section>
+
 <!-- My threads list columns -->
 <main>
     <div class="container">
@@ -47,8 +48,9 @@
                         <div class="edit-btn">
                             <form class="me-1" action="{% url 'edit_thread' thread.id %}" method="get"><button
                                     class="btn btn-success">Edit</button></form>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target=".staticBackdrop">Delete</button>
+                            <form action="{% url 'delete_thread' thread.id %}" method="get">
+                                <button class="btn btn-danger" action="submit"
+                                    >Delete</button></form>
                         </div>
                         <div class="modal fade staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-hidden="true">

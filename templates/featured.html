@@ -4,7 +4,19 @@
 
 {% load static %}
 
-<div class="container">
+<!-- Header-->
+<header class="masthead d-flex align-items-center list-header-img">
+    <div class="container px-4 px-lg-5 text-center header-text">
+        <h1 class="mb-1">Featured Threads</h1>
+        <h3 class="mb-5"><em>Featured Build Threads</em></h3>
+        <div class="pb-3">
+            <a class="btn btn-primary btn-xl create-btn" href="{% url 'create_thread' %}">Create a Thread</a>
+        </div>
+    </div>
+</header>
+
+<!-- Feature page content -->
+<div class="container pt-5">
     <div class="row row-cols-1 row-cols-md-2">
         {% for thread in featured_threads %}
         <div class="col mb-4">
