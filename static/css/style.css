@@ -10,7 +10,14 @@ h2 {
   font-family: 'Roboto Slab', serif;
 }
 
-.header-bg {
+.list-header-img {
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674423779/pexels-deane-bayas-9212878_f597ae.jpg");
+}
+
+.home-header-bg {
   height: 250px;
 }
 

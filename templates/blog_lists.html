@@ -5,14 +5,16 @@
 {% load static %}
 
 <!-- Header-->
-<header class="masthead d-flex align-items-center header-bg">
+<header class="masthead d-flex align-items-center list-header-img">
     <div class="container px-4 px-lg-5 text-center">
         <h1 class="mb-1">Build Threads</h1>
-        <h3 class="mb-5"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></h3>
-        <a class="btn btn-primary btn-xl" href="{% url 'create_thread' %}">Create a Thread</a>
+        <h3 class="mb-5"><em>Share your Build Threads with us!</em></h3>
+        <div class="pb-3">
+            <a class="btn btn-primary btn-xl create-btn" href="{% url 'create_thread' %}">Create a Thread</a>
+        </div>
     </div>
 </header>
-<main>
+<main class="pt-5">
     <div class="container-fluid">
         <div class="row">
             <!-- Blog Entries Column -->
