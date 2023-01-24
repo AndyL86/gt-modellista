@@ -186,9 +186,22 @@ h5 {
   background-color: #444;
 }
 
+.about-header{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674418447/pexels-supreet-8134647_sykbgv.jpg");
+
+}
+
 .about-bg {
   width: 100%;
   height: auto;
+}
+
+.about-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
 }
 
 /* My Threads Page styling */
