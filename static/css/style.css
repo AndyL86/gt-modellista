@@ -229,6 +229,11 @@ h5 {
   background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674418447/pexels-supreet-8134647_sykbgv.jpg");
 }
 
+/* Thread Detail Page */
+.detail-bg {
+  background-color: #d8dfe4;
+}
+
 @media (max-width: 700px) {
   .menu-button-container {
     display: flex;

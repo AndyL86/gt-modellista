@@ -6,16 +6,16 @@
 {% load static %}
 
 <div class="container px-5 my-5">
-    <div class="row gx-5 justify-content-center">
-        <div class="col-lg-6">
+    <div class="row gx-5 justify-content-center detail-bg">
+        <div class="col-lg-6 py-3">
             <div class="text-center mb-5">
                 <h1 class="fw-bolder">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h1>
-                <h2 class="text-center">Story:</h2>
+                <h2 class="text-center py-3">Story:</h2>
                 <div>
                     <p>{{ thread.story | safe }}</p>
                 </div>
                 <hr>
-                <h2 class="text-center">Modifications:</h2>
+                <h2 class="text-center py-3">Modifications:</h2>
                 <div>
                     {{ thread.modifications | safe }}
                 </div>
@@ -44,7 +44,7 @@
         <span class="text_secondary">{{ thread.number_of_likes }}</span>
     </div>
     <div class="container">
-        <div class="row card">
+        <div class="row card mb-3">
             <div class="col my-4">
                 <h3>Comments:</h3>
                 <div class="card-body border border-dark">
@@ -72,7 +72,7 @@
             {% else %}
 
             {% if user.is_authenticated %}
-            <div class="col card mb-4">
+            <div class="col card mb-4 pb-2">
                 <h3>Leave a comment</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post">
