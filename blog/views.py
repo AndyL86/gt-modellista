@@ -175,3 +175,8 @@ def About(request):
 
 def Partners(request):
     return render(request, "partners.html")
+
+
+def error_404(request, exception):
+    """ View for 404 error """
+    return render(request, '404_page.html')
