@@ -14,16 +14,19 @@
         </div>
     </div>
 </header>
+
+<!-- Build Thread List -->
 <main>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row pt-5">
             <!-- Blog Entries Column -->
             {% for thread in thread_list %}
-            <div class="col-md-4 pt-5">
-                <div class="card">
+            <div class="col-md-4 pb-5">
+                <div class="card thread-card">
                     <div class="card-body">
-                        <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
+                        <h2 class="card-title text-center card-title">{{ thread.year }} {{ thread.make }} {{ thread.model }}
                         </h2>
+                        <hr>
                         <a href="{% url 'thread_detail' thread.slug %}">
                             <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
                         </a>

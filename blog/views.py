@@ -179,4 +179,8 @@ def Partners(request):
 
 def error_404(request, exception):
     """ View for 404 error """
-    return render(request, '404_page.html')
+    return render(request, "404_page.html", status=404)
+
+def error_500(request):
+    """ View for 500 error """
+    return render(request, '500_page.html', status=500)

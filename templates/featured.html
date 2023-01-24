@@ -8,7 +8,7 @@
 <header class="masthead d-flex align-items-center list-header-img">
     <div class="container px-4 px-lg-5 text-center header-text">
         <h1 class="mb-1">Featured Threads</h1>
-        <h3 class="mb-5"><em>Featured Build Threads</em></h3>
+        <h3 class="mb-5"><em>Keep updated with the best of the GT Modellista Build Threads!</em></h3>
         <div class="pb-3">
             <a class="btn btn-primary btn-xl header-btn" href="{% url 'create_thread' %}">Create a Thread</a>
         </div>
@@ -21,13 +21,19 @@
         <div class="row row-cols-1 row-cols-md-2">
             {% for thread in featured_threads %}
             <div class="col mb-4">
-                <div class="card">
-                    <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
+                <div class="card thread-card">
                     <div class="card-body">
-                        <h5 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h5>
-                        <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
-                        <span class="text_secondary">{{ thread.number_of_likes }}</span>
-                        <p class="card-text"></p>
+                        <a href="{% url 'thread_detail' thread.slug %}">
+                            <img src=" {{ thread.thread_image.url }}" alt="" class="list-image">
+                            <div class="card-body">
+                                <h5 class="text-center">{{ thread.year }} {{ thread.make }}
+                                    {{ thread.model }}
+                                </h5>
+                                <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
+                                <span class="text_secondary">{{ thread.number_of_likes }}</span>
+                                <p class="card-text"></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -36,4 +42,7 @@
     </div>
 </main>
 
+{% if is_paginated %}
+{% include "pagination.html" %}
+{% endif %}
 {% endblock %}
