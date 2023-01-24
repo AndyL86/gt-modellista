@@ -44,8 +44,8 @@
         <span class="text_secondary">{{ thread.number_of_likes }}</span>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col card mb-4">
+        <div class="row card">
+            <div class="col my-4">
                 <h3>Comments:</h3>
                 <div class="card-body border border-dark">
                     {% for comment in comments %}
@@ -62,22 +62,25 @@
                 </div>
             </div>
         </div>
-        <div class="col card mb-4"">
+        {% if commented %}
+        <div class="col card mb-4">
             <div class=" card-body">
-            {% if commented %}
-            <div class="alert alert-success" role="alert">
-                Please wait while we approve your comment
+                <div class="alert alert-success" role="alert">
+                    Your comment was posted successfully!
+                </div>
             </div>
             {% else %}
 
             {% if user.is_authenticated %}
-            <h3>Leave a comment</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit">Submit comment</button>
-            </form>
+            <div class="col card mb-4">
+                <h3>Leave a comment</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit">Submit comment</button>
+                </form>
+            </div>
             {% endif %}
             {% endif %}
 
