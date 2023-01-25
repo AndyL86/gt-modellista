@@ -164,7 +164,7 @@ MY THREADS WIREFRAME
 
 ### **My Threads Page**
 - Authenticated users can view a list of their posted build threads.
-- Each blog post card displays the edit and delete buttons.
+- At the bottom of each blog post card displays the edit and delete buttons
 
 ### **Create Build Thread Page**
 - The Create Thread page allows authenticated users to post their own Build Thread blog post.
