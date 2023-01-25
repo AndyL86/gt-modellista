@@ -5,7 +5,9 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 
 ![Am I Responsive?](docs/read-me/responsive.png)
 
-## **Table of Contents**
+## **TABLE OF CONTENTS**
+<hr>
+
  - [**User Experience (UX)**](#user-experience)
     * [User Stories](#user-stories)
     * [Agile Methodology](#agile-methodology)
@@ -22,7 +24,8 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
  - [**Deployment**](#deployment)
  - [**Credits**](#credits)
 
-## **User Experience (UX)**
+## **USER EXPERIENCE (UX)**
+<hr>
 
 ### **User Stories**
 
@@ -72,7 +75,8 @@ To help define the functionalities and prioritise key features, these 'User Stor
 - To provide controlled functionality based on a user's permissions.
 - To provide user's with a profile that allows them to manage their own content.
 
-## **Design**
+## **DESIGN**
+<hr>
 
 ### **Colours**
 - For the colour schema of the site I opted for a dark theme for the header and footer, using #24272C with a contrasting lighter neutral page background colour of #C0C4CA. This is so user's can easily differentiate between the different sections of the page. I used [ColourSpace](https://mycolor.space/) to generate the colour pallette I wanted.
@@ -85,6 +89,9 @@ To help define the functionalities and prioritise key features, these 'User Stor
 - All fonts were sourced through [Google fonts](https://fonts.google.com/).
 
 ### **Media**
+- [Balsamiq](https://balsamiq.com/) was used for the design of my wireframes and database schema.
+- [Pexels](https://www.pexels.com/) was used for the header images.
+- The GTM logo is my own design and post list images are my own images.
 
 ### **Wireframes**
 Wireframes for each page are linked here:
@@ -107,7 +114,6 @@ MY THREADS WIREFRAME
 
 [Partnerss Posts](docs/read-me/view-partners-post.png)
 
-
 [Signup Page](docs/read-me/signup-page.png)
 
 [Login Page](docs/read-me/login-page.png)
@@ -115,32 +121,72 @@ MY THREADS WIREFRAME
 ### **Database Schema**
 ![Database Schema](docs/read-me/data-schema.png)
 
-## **Features**
+## **FEATURES**
+<hr>
+
+### **Navigation**
+
+#### **Desktop Navigation**
+- The navigation bar is located at the top of each page on the site and has a sticky functionality to pin the nav bar at the top of the page when scrolled. This is to allow the user ease of navigation when browsing the site.
+- The menu contains links for the 'Home Page', 'About Page', 'GT Modellista Page' and a dropdown link containing the 'Featured Threads Page', 'Register Account Page' and a 'Login Page' link. 
+- Once the user is logged in the dropdown menu includes a link to the user's 'My Threads Page' and the login link is replaced with the 'Logout Page' link.
+- The navbar is fully responsive and collapses into a burger menu for mobile devices.
+![Desktop Nav](docs/read-me/desktop-nav.png)
+
+#### **Mobile Navigation**
+- Presented as a burger menu for design responsiveness.
+- Once clicked a dropdown menu appears including all the page links as above, including the dropdown menu.
+![Mobile Nav](docs/read-me/mobile-nav.png)
 
 ### **Home Page**
+- Upon landing on the homepage the user is presented with a header banner which details the sites purpose and contains a click button which directs the user to the account registration page.
+- Underneath the header is the carousel image real of 3 'Featured' build thread blog posts. Featured posts are selected by Admin. Navigation icons are displayed on each side of the image and a counter tab is displayed at the bottom of the image to display which image is being displayed.
+- At the bottom of the page is a 'Trending' section displaying the build threads with the most likes.
 
 ### **About Page**
+- The 'About' page contains a header with styled image and the page title.
+- Underneath the header is a brief description of the GT Modellista site.
 
-### **Blog Categories Page**
+### **Build Threads Blog Page**
+- Upon landing on the 'Build Threads' page the user is presented with a header containing a styled image and the page title and subtext.
+- Contained within the header is a click button which redirects the user to the 'Create Thread' page.
+- The Build Threads page is the main focal point of the GT Modellista site and contains each blog post by an authenticated user.
+- The page will paginate the Build Thread cards to display 6 per page.
+- Each Build Thread card will display the thread title, image, author's username and the date and time the post was published.
+- Each card contains a like icon and like counter to display how many likes the post has.
+- Build Threads can be opened to view by clicking the thread's image.
 
-### **Build Thread Page**
+### **Create Build Thread Page**
+- The Create Thread page allows authenticated users to post their own Build Thread blog post.
+- The create a thread form contains mandatory fields for: Vehicle Year, Vehicle Model, Vehicle Make, a link to upload an image, a text box for the user's story and a text box for the vehicle's modifications.
+- Each text box uses Summernote to allow text styling to be applied.
+- The create thread confirm button is located at the bottom of the page.
+- If an unauthenticated user tries to access the Create Thread page they are presented with an access denied error.
 
-### **Build Thread Post**
+### **Edit Build Thread Page**
 
-### **Diescasts Page**
-
-### **Diecasts Post**
-
-### **Partners and Sponsors Page**
-
-### **Partners and Sponsors Post**
+### **Thread Details Page**
+- Once a Build Thread is selected the user is brought to the Thread Details page.
 
 
+### **Comments Section**
 
-## **Testing**
+### **Featured Threads Page**
 
-## **Technologies Used**
+### **My Threads Page**
 
-## **Deployment**
+## **ACCOUNTS**
+<hr>
+
+
+## **TESTING**
+<hr>
+
+## **TECHNOLOGIES USED**
+<hr>
+
+## **DEPLOYMENT**
+<hr>
 
 ## **Credits**
+<hr>
