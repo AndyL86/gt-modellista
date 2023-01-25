@@ -29,6 +29,11 @@ h5 {
   border-radius: 6px;
 }
 
+hr {
+  border-top: 1px solid;
+  max-width: 70%;
+}
+
 /* Navigation styling */
 .nav-menu {
   flex-direction: row;
@@ -62,6 +67,7 @@ h5 {
   background-color: #24272C;
   height: 50px;
   padding: 1em;
+  opacity: 0.9;
 }
 
 .menu {
@@ -157,6 +163,8 @@ h5 {
   max-width: 100%;
 }
 
+/* Thread Post Card */
+
 .thread-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
@@ -167,6 +175,7 @@ h5 {
 .card-title {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 30px;
+  font-weight: bold;
 }
 
 /* Home Page styling */
