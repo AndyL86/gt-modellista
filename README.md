@@ -75,8 +75,14 @@ To help define the functionalities and prioritise key features, these 'User Stor
 ## **Design**
 
 ### **Colours**
+- For the colour schema of the site I opted for a dark theme for the header and footer, using #24272C with a contrasting lighter neutral page background colour of #C0C4CA. This is so user's can easily differentiate between the different sections of the page. I used [ColourSpace](https://mycolor.space/) to generate the colour pallette I wanted.
+- The button styling was inspired by the retro PlayStation 1 game 'Gran Turismo 2'. For the background colour I used #f7b91e.
+- The Navigation menu and Header font colour chosen is rgb(201, 203, 204).
 
 ### **Typography**
+- I chose 'Roboto Slab' for my Navigation menu and Header Title fonts, with a supporting font of 'serif' incase of loading failure. This font ide was inspired by a VW Golf GTI badge.
+- The Header text and Build Thread title text use 'Noto Sans JP' and 'sans serif' as a backup. This was chosen for its clean presentation and easy readability.
+- All fonts were sourced through [Google fonts](https://fonts.google.com/).
 
 ### **Media**
 
