@@ -141,39 +141,47 @@ MY THREADS WIREFRAME
 ### **Home Page**
 - Upon landing on the homepage the user is presented with a header banner which details the sites purpose and contains a click button which directs the user to the account registration page.
 - Underneath the header is the carousel image real of 3 'Featured' build thread blog posts. Featured posts are selected by Admin. Navigation icons are displayed on each side of the image and a counter tab is displayed at the bottom of the image to display which image is being displayed.
-- At the bottom of the page is a 'Trending' section displaying the build threads with the most likes.
+- At the bottom of the page is a 'Popular' section displaying the build threads with the most likes.
 
 ### **About Page**
-- The 'About' page contains a header with styled image and the page title.
+- The About page contains a header with styled image and the page title.
 - Underneath the header is a brief description of the GT Modellista site.
 
 ### **Build Threads Blog Page**
-- Upon landing on the 'Build Threads' page the user is presented with a header containing a styled image and the page title and subtext.
-- Contained within the header is a click button which redirects the user to the 'Create Thread' page.
-- The Build Threads page is the main focal point of the GT Modellista site and contains each blog post by an authenticated user.
+- The Build Threads page contains all posts created by authenticated users. 
+- Upon landing on the Build Threads page the user is presented with a header containing a styled image, page title and subtext. 
+- Contained within the header is a click button which redirects the user to the Create Thread page.
 - The page will paginate the Build Thread cards to display 6 per page.
 - Each Build Thread card will display the thread title, image, author's username and the date and time the post was published.
 - Each card contains a like icon and like counter to display how many likes the post has.
 - Build Threads can be opened to view by clicking the thread's image.
 
+### **Featured Threads Page**
+- The Featured threads page displays posts selected specifically by admin.
+- The header displays an image with the page title and subtext.
+- Blog posts are presented in 2 columns with larger blog post cards to give a bold impression to the user.
+- No users are authenticated to post build threads directly into featured.
+
+### **My Threads Page**
+- Authenticated users can view a list of their posted build threads.
+- Each blog post card displays the edit and delete buttons.
+
 ### **Create Build Thread Page**
 - The Create Thread page allows authenticated users to post their own Build Thread blog post.
-- The create a thread form contains mandatory fields for: Vehicle Year, Vehicle Model, Vehicle Make, a link to upload an image, a text box for the user's story and a text box for the vehicle's modifications.
+- The create thread form contains mandatory fields for: Vehicle Year, Vehicle Model, Vehicle Make, a link to upload an image, a text box for the user's story and a text box for the vehicle's modifications.
 - Each text box uses Summernote to allow text styling to be applied.
 - The create thread confirm button is located at the bottom of the page.
 - If an unauthenticated user tries to access the Create Thread page they are presented with an access denied error.
 
-### **Edit Build Thread Page**
-
 ### **Thread Details Page**
-- Once a Build Thread is selected the user is brought to the Thread Details page.
-
+- When a Build Thread is selected the user is brought to the Thread Details page detailing all the information the author has provided.
+- The main body of the page displays the vehicle year, make and model as the page title, below this are 2 text box areas containing the 'Story' and 'Modifications' sections and the thread image.
+- Below the image is a 'heart' icon with a number counter, this allows authenticated users to like the thread and provides a total number of likes to all users.
+- Alternatively, if the heart icon has already been selected showing a like, the heart can be unselected to remove the like.
 
 ### **Comments Section**
-
-### **Featured Threads Page**
-
-### **My Threads Page**
+- At the bottom of the page all users are able to view the comments section.
+- Authenticated users are able to leave comments.
 
 ## **ACCOUNTS**
 <hr>
