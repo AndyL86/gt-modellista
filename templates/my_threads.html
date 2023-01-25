@@ -5,10 +5,10 @@
 {% load static %}
 
 <!-- Header-->
-<section class="d-flex align-items-center header-bg my-thread-img">
+<section class="masthead d-flex align-items-center my-thread-img">
     <div class="container px-4 px-lg-5 text-center header-text">
         <h1 class="mb-1">My Build Threads</h1>
-        <h3 class="mb-5"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></h3>
+        <h4 class="my-4">Here you can view, edit and delete your build threads</h4>
         <a class="btn btn-primary btn-xl header-btn" href="{% url 'create_thread' %}">Create a Thread</a>
     </div>
 </section>
@@ -16,10 +16,10 @@
 <!-- My threads list columns -->
 <main>
     <div class="container">
-        <div class="row">
+        <div class="row my-4">
             {% for thread in page_obj %}
             <div class="col-md-4">
-                <div class="card">
+                <div class="card thread-card">
                     <div class="card-body blog-card">
                         <h2 class="card-title text-center">{{ thread.year }} {{ thread.make }} {{ thread.model }}
                         </h2>

@@ -3,13 +3,13 @@ body {
   background-color: #C0C4CA;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Roboto Slab', serif;
   text-transform: uppercase;
 }
 
-h2, h3 {
-  font-family: 'Roboto Slab', serif;
+h4 {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 h5 {
@@ -209,7 +209,7 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674418447/pexels-supreet-8134647_sykbgv.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674576192/wmpcpaumsf5oge7irzr8.jpg");
 }
 
 .my-threads {
