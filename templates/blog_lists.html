@@ -35,15 +35,13 @@
                         <form action="{% url 'thread_like' thread.slug %}" method="POST">
                             {% csrf_token %}
                             {% if liked %}
-                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                                    class="far fa-heart"></i></button>
+                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i class="fa-regular fa-thumbs-up"></i></button>
                             {% else %}
-                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                                    class="fas fa-heart"></i></button>
+                            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
                             {% endif %}
                         </form>
                         {% else %}
-                        <span class="text_secondary"><i class="far fa-heart"></i></span>
+                        <span class="text_secondary"><i class="fa-regular fa-thumbs-up"></i></span>
                         {% endif %}
                         <span class="text_secondary">{{ thread.number_of_likes }}</span>
                         <p class="card-text"></p>
