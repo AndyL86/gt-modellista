@@ -19,6 +19,15 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
     * [Wireframes](#wireframes)
     * [Database Schema](#database-schema)
  - [**Features**](#features)
+   * [Navigation](#navigation)
+   * [Footer](#footer)
+   * [Home Page](#home)
+   * [About Page](#about)
+   * [Build Threads Blog Page](#build-threads)
+   * [Featured Threads Page](#featured)
+   * [My Threads Page](#my-threads)
+   * [Create Build Thread Page](#my-thread)
+   * [Thread Details Page](#thread-details)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
  - [**Deployment**](#deployment)
@@ -137,6 +146,10 @@ MY THREADS WIREFRAME
 - Presented as a burger menu for design responsiveness.
 - Once clicked a dropdown menu appears including all the page links as above, including the dropdown menu.
 ![Mobile Nav](docs/read-me/mobile-nav.png)
+
+## **Footer**
+- 
+![Footer](docs/read-me/footer.png)
 
 ### **Home Page**
 - Upon landing on the homepage the user is presented with a header banner which details the sites purpose and contains a click button which directs the user to the account registration page.
