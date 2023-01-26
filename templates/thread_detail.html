@@ -10,6 +10,7 @@
         <div class="col-lg-6 py-3">
             <div class="text-center mb-5">
                 <h1 class="fw-bolder">{{ thread.year }} {{ thread.make }} {{ thread.model }}</h1>
+                <hr>
                 <h2 class="text-center py-3">Story:</h2>
                 <div>
                     <p>{{ thread.story | safe }}</p>
@@ -24,7 +25,7 @@
     </div>
     <!-- Thread Image -->
     <div class="row gx-5">
-        <div class="col-12"><img class="img-fluid rounded-3 mb-5" src=" {{ thread.thread_image.url }}" alt="..." />
+        <div class="col-12"><img class="img-fluid rounded-3 mb-3" src=" {{ thread.thread_image.url }}" alt="..." />
         </div>
     </div>
     <!-- Likes and Comments counter -->
