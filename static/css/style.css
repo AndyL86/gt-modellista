@@ -202,6 +202,15 @@ hr {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.partner-img {
+  border-radius: 15px;
+}
+
+.partner-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* About Page styling */
 .about-container {
   border-radius: 10px;
