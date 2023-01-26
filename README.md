@@ -99,7 +99,7 @@ To help define the functionalities and prioritise key features, these 'User Stor
 
 ### **Media**
 - [Balsamiq](https://balsamiq.com/) was used for the design of my wireframes and database schema.
-- [Pexels](https://www.pexels.com/) was used for the header images.
+- [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/) were used for the header and Partners images.
 - The GTM logo is my own design and post list images are my own images.
 
 ### **Wireframes**

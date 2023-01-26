@@ -3,7 +3,9 @@ body {
   background-color: #C0C4CA;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Roboto Slab', serif;
   text-transform: uppercase;
 }
@@ -35,9 +37,9 @@ hr {
 }
 
 .hr-comment {
-    border-top: 1px solid;
-    max-width: 90%;
-  }
+  border-top: 1px solid;
+  max-width: 90%;
+}
 
 /* Navigation styling */
 .nav-menu {
@@ -176,7 +178,7 @@ hr {
 /* Thread Post Card */
 
 .thread-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   opacity: 0.9;
   background-color: #d8dfe4;
@@ -202,10 +204,12 @@ hr {
 
 /* About Page styling */
 .about-container {
-  background-color: #444;
+  border-radius: 10px;
+  background-color: rgb(230, 235, 225);
+  opacity: 0.8;
 }
 
-.about-header{
+.about-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -220,7 +224,8 @@ hr {
 
 .about-text {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px;
+  font-size: 17px;
+  padding-bottom: 1.5rem;
 }
 
 /* My Threads Page styling */
@@ -262,6 +267,7 @@ hr {
 .create-form input[type="file"] {
   width: 160px;
 }
+
 @media (max-width: 700px) {
 
   .menu-button-container {
@@ -309,6 +315,6 @@ hr {
   }
 }
 
-  .detail-container {
-    padding: 0;
-  }
+.detail-container {
+  padding: 0;
+}
