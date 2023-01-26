@@ -182,6 +182,7 @@ class Featured(View):
         context = {
             "featured_threads": featured_threads,
         }
+        paginate_by = 6
         return render(request, 'featured.html', context)
 
 

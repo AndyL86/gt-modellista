@@ -202,12 +202,81 @@ MY THREADS WIREFRAME
 
 ## **TESTING**
 <hr>
+Testing and results can be found [here](TESTING.md)
 
 ## **TECHNOLOGIES USED**
 <hr>
 
+### Languages used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+
+### Libraries and Programs Used
+
+- [Git](https://git-scm.com/)<br>
+   Used for version control alongside GitHub.
+- [GitHub](https://github.com/)<br>
+   Used to store the project and utilise git version control.
+- [Heroku](https://id.heroku.com)<br>
+   Used to deploy project.
+- [Cloudinary](https://cloudinary.com/)<br>
+   Cloud based storage, used for storing any media submitted by users.
+- [ElephantSQL](https://www.elephantsql.com/)<br>
+   Used to host the PostgreSQL database.
+- [W3C - HTML](https://validator.w3.org/)<br>
+   Used to validate all HTML code.
+- [W3C - CSS](https://jigsaw.w3.org/css-validator/)<br>
+   Used to validate all CSS code.
+- [CI PEP8 Testing](https://pep8ci.herokuapp.com/)<br>
+   Used to validate all Python code.
+- [Google Fonts](https://fonts.google.com/)<br>
+   Used to provide the font styling.
+- [Bootstrap](https://getbootstrap.com/)<br>
+   Used to for helping with the HTML design and layout.
+- [Fontawesome](https://fontawesome.com/)<br>
+   Used to implement effective icons.
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)<br>
+   Used during the development to debug and test responsiveness.
+- [Balsamiq](https://balsamiq.com/)<br>
+   Used to build both the database schema diagram and design wireframes.
+
 ## **DEPLOYMENT**
 <hr>
+
+### ** Create Github Repository **
+- Log in to your Github account.
+- Navigate to repositories and select 'New'.
+- Select the 'Code Institute' template from the 'Repository Template' menu.
+- Give your repository a name and select 'Create Repository'.
+- When the repository has been created select 'Gitpod' to open a new workspace.
+
+### ** Heroku **
+- Log in to your Heroku account [Heroku](https://id.heroku.com).
+- From the home page select 'New', then select 'Create New App' from the drop-down.
+- Provide a name for your app and selectyour regrion.
+- Add 3 new keys along with your relevant value information: 'SECRET_KEY', 'DATABASE_URL' and 'ClOUDINARY_URL'. 
+- At the top of the page select the 'Deploy' tab.
+- For the preferred deployment method select 'Github'.
+- Search for your repository name and connect.
+- Additionally, automatic deploys can be enabled for deployment after each push to Github.
+
+### ** Fork this project **
+- Sign in to Github and go to my [repository](https://github.com/AndyL86/gt-modellista)
+- At the top of the page select 'Fork'.
+- The Fork will now be added to your repositories.
+
+### ** Clone this project **
+- Sign in to Github and go to my [repository](https://github.com/AndyL86/gt-modellista)
+- Select the green 'Code' button.
+- Select from one of the cloning options HTTPS, SSH or Github CLI. Click the clipboard icon to copy the URL.
+- Open git bash
+- Enter ‘git clone’ into the text box and then paste the respository URL and select enter. 
+
+For more information on cloning please read the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 
 ## **Credits**
 <hr>
