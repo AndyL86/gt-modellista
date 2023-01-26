@@ -140,6 +140,15 @@ class EditComment(UpdateView):
     success_message = 'Comment Successfully Updated'
 
 
+def delete_comment(request, comment_id):
+    """ View to Delete Comments """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.success(request, 'Your comment has been deleted successfully!')
+    return HttpResponseRedirect(reverse(
+        'thread_detail', args=[comment.thread.slug]))
+
+
 @login_required
 def delete_thread(request, pk):
     """ View to Delete Thread post """

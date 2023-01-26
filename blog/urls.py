@@ -19,6 +19,10 @@ urlpatterns = [
         ),
     path('delete_thread/<int:pk>/',
          views.delete_thread, name='delete_thread'),
+    path(
+        'delete_comment/<int:comment_id>',
+        views.delete_comment, name='delete_comment'
+        ),
     path('<slug:slug>/', views.ThreadDetail.as_view(), name='thread_detail'),
     path('like/<slug:slug>', views.ThreadLike.as_view(), name='thread_like')
 ]

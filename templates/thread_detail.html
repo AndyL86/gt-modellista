@@ -75,6 +75,29 @@
                     {% if user.is_authenticated and user.username == comment.name %}
                     <a href="{% url 'edit_comment' comment.id %}"><button
                             class="btn-sm btn-secondary ">Edit</button></a>
+                            <form action="{% url 'delete_comment' comment.id %}" method="get">
+                                <button class="btn btn-danger" action="submit">Delete</button></form>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Delete Comment</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Your comment will be deleted, do you want to continue?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No,
+                                        Close</button>
+                                    <a href="{% url 'delete_comment' comment.id %}"><button type="submit"
+                                            class="btn btn-danger">Yes, Delete</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     {% endif %}
                     {% endfor %}
                 </div>
