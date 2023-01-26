@@ -131,12 +131,14 @@ class EditThread(UpdateView):
     form_class = ThreadForm
     success_url = reverse_lazy('my_threads')
 
+
 class EditComment(UpdateView):
     """ View to Edit Comments """
     model = Comment
     template_name = 'edit_comment.html'
     form_class = CommentForm
     success_message = 'Comment Successfully Updated'
+
 
 @login_required
 def delete_thread(request, pk):
@@ -165,7 +167,7 @@ class ThreadLike(View):
 
 
 class Featured(View):
-    
+
     def get(self, request):
         featured_threads = Thread.objects.filter(featured=True)[:2]
         context = {
@@ -186,6 +188,7 @@ def Partners(request):
 def error_404(request, exception):
     """ View for 404 error """
     return render(request, "404_page.html", status=404)
+
 
 def error_500(request):
     """ View for 500 error """
