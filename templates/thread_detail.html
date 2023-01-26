@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 {% load static %}
-
+<!-- Thread Header w/image -->
 <div class="container px-5 my-5">
     <div class="row gx-5 justify-content-center detail-bg">
         <div class="col-lg-6 py-3">
@@ -22,34 +22,39 @@
             </div>
         </div>
     </div>
+    <!-- Thread Image -->
     <div class="row gx-5">
         <div class="col-12"><img class="img-fluid rounded-3 mb-5" src=" {{ thread.thread_image.url }}" alt="..." />
         </div>
     </div>
-    <div class="col-4">
-        {% if user.is_authenticated %}
-        <form action="{% url 'thread_like' thread.slug %}" method="POST">
-            {% csrf_token %}
-            {% if liked %}
-            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                    class="far fa-heart"></i></button>
+    <!-- Likes and Comments counter -->
+    <div class="row">
+        <div class="col-sm">
+            {% if user.is_authenticated %}
+            <form action="{% url 'thread_like' thread.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="userthread_id" value="{{thread.slug}}" class="text-secondary"><i
+                        class="fa-regular fa-thumbs-up"></i></button>
+                {% else %}
+                <button type="submit" name="userthread_id" value="{{thread.slug}}" class="text-secondary"><i
+                        class="fa-solid fa-thumbs-up"></i></button>
+                {% endif %}
+            </form>
             {% else %}
-            <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
-                    class="fas fa-heart"></i></button>
+            <span class="text-secondary"><i class="fa-regular fa-thumbs-up"></i></span>
             {% endif %}
-        </form>
-        {% else %}
-        <span class="text_secondary"><i class="far fa-heart"></i></span>
-        {% endif %}
-        <strong class="text_secondary">{{ thread.number_of_likes }}</strong>
+            <strong class="text-secondary">{{ thread.number_of_likes }}</strong>
+        </div>
+        <div class="col-sm">
+            {% with comments.count as comments_total %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ comments_total }}
+            </strong>
+            {% endwith %}
+        </div>
     </div>
-    <div class="col-4">
-        {% with comments.count as comments_total %}
-        <strong class="text-secondary"><i class="far fa-comments"></i>
-            {{ comments_total }}
-        </strong>
-        {% endwith %}
-    </div>
+    <!-- Comments section -->
     <div class="container">
         <div class="row card mb-3">
             <div class="col my-4">
@@ -66,8 +71,8 @@
                         {{ comment.body | linebreaks }}
                     </div>
                     <hr class="hr-comment">
+                    <!-- Edit/Delete Comments -->
                     {% if user.is_authenticated and user.username == comment.name %}
-
                     <a href="{% url 'edit_comment' comment.id %}"><button
                             class="btn-sm btn-secondary ">Edit</button></a>
                     {% endif %}
@@ -83,7 +88,7 @@
                 </div>
             </div>
             {% else %}
-
+            <!-- Submit Comment -->
             {% if user.is_authenticated %}
             <div class="col card mb-4 pb-2">
                 <h3>Leave a comment</h3>
