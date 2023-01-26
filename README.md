@@ -121,8 +121,6 @@ MY THREADS WIREFRAME
 
 [Partners Page](docs/read-me/partners.png)
 
-[Partnerss Posts](docs/read-me/view-partners-post.png)
-
 [Signup Page](docs/read-me/signup-page.png)
 
 [Login Page](docs/read-me/login-page.png)
@@ -168,6 +166,10 @@ MY THREADS WIREFRAME
 - Each Build Thread card will display the thread title, image, author's username and the date and time the post was published.
 - Each card contains a like icon and like counter to display how many likes the post has.
 - Build Threads can be opened to view by clicking the thread's image.
+
+#### **Desktop**
+![Blog List](docs/read-me/blog-list.png)
+
 
 ### **Featured Threads Page**
 - The Featured threads page displays posts selected specifically by admin.

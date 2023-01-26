@@ -178,7 +178,7 @@ class ThreadLike(View):
 class Featured(View):
 
     def get(self, request):
-        featured_threads = Thread.objects.filter(featured=True)[:2]
+        featured_threads = Thread.objects.filter(featured=True)
         context = {
             "featured_threads": featured_threads,
         }
