@@ -56,6 +56,11 @@ hr {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
+.username {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(201, 203, 204);
+}
+
 .dropdown-icon {
   color: rgb(201, 203, 204);
 }
