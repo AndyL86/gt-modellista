@@ -308,3 +308,7 @@ hr {
     border-bottom: 1px solid #444;
   }
 }
+
+  .detail-container {
+    padding: 0;
+  }
