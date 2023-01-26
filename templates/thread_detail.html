@@ -65,6 +65,12 @@
                         </p>
                         {{ comment.body | linebreaks }}
                     </div>
+                    <hr class="hr-comment">
+                    {% if user.is_authenticated and user.username == comment.name %}
+
+                    <a href="{% url 'edit_comment' comment.id %}"><button
+                            class="btn-sm btn-secondary ">Edit</button></a>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>

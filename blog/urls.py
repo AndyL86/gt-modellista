@@ -13,6 +13,10 @@ urlpatterns = [
     path(
         'edit_thread/<int:pk>', views.EditThread.as_view(), name='edit_thread'
         ),
+    path(
+        'edit_comment/<int:pk>',
+        views.EditComment.as_view(), name='edit_comment'
+        ),
     path('delete_thread/<int:pk>/',
          views.delete_thread, name='delete_thread'),
     path('<slug:slug>/', views.ThreadDetail.as_view(), name='thread_detail'),

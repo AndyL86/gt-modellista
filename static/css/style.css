@@ -34,6 +34,11 @@ hr {
   max-width: 70%;
 }
 
+.hr-comment {
+    border-top: 1px solid;
+    max-width: 90%;
+  }
+
 /* Navigation styling */
 .nav-menu {
   flex-direction: row;

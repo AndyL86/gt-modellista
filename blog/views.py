@@ -131,6 +131,12 @@ class EditThread(UpdateView):
     form_class = ThreadForm
     success_url = reverse_lazy('my_threads')
 
+class EditComment(UpdateView):
+    """ View to Edit Comments """
+    model = Comment
+    template_name = 'edit_comment.html'
+    form_class = CommentForm
+    success_message = 'Comment Successfully Updated'
 
 @login_required
 def delete_thread(request, pk):
