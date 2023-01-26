@@ -188,12 +188,11 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674243570/header_pdz30e.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ddq4xlkxd/image/upload/v1674243570/header_pdz30e.png");
 }
 
 .home-header {
   font-family: 'Noto Sans JP', sans-serif;
-  opacity: 0.9;
 }
 
 /* About Page styling */

@@ -8,7 +8,7 @@
 <header class="masthead d-flex align-items-center feature-header">
     <div class="container px-4 px-lg-5 text-center header-text">
         <h1 class="mb-1">Featured Threads</h1>
-        <h4 class="my-4">Keep up to date with the best of the GT Modellista Build Threads</h4>
+        <h4 class="my-4">Keep up to date with our picks of the best GT Modellista Build Threads</h4>
         <div class="pb-3">
             <a class="btn btn-primary btn-xl header-btn" href="{% url 'create_thread' %}">Create a Thread</a>
         </div>
@@ -30,6 +30,21 @@
                                     {{ thread.model }}
                                 </h5>
                                 <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
+                                <!-- Thread post like -->
+                                {% if user.is_authenticated %}
+                                <form action="{% url 'thread_like' thread.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="userthread_id" value="{{thread.slug}}"
+                                        class="btn-like"><i class="fa-regular fa-thumbs-up"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="userthread_id" value="{{thread.slug}}"
+                                        class="btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span class="text_secondary"><i class="fa-regular fa-thumbs-up"></i></span>
+                                {% endif %}
                                 <span class="text_secondary">{{ thread.number_of_likes }}</span>
                                 <p class="card-text"></p>
                             </div>
