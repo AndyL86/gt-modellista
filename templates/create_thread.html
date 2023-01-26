@@ -12,7 +12,7 @@
         <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
             <div class="text-center mb-5">
                 <div class="bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                <form method="POST" enctype="multipart/form-data"class="create-form px-5 pt-3 pb-4" >
+                <form method="POST" enctype="multipart/form-data"class="create-form px-2 pt-3 pb-4" >
                     <h3 class="my-2">Create your thread</h3>
                     {% csrf_token %}
                     {{ thread_form|crispy }}
