@@ -253,6 +253,12 @@ hr {
   background-color: #d8dfe4;
 }
 
+.admin-comment {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  color: rgb(0, 0, 0);
+}
+
 @media (max-width: 700px) {
 
   .menu-button-container {
