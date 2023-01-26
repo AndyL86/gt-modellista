@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% load cloudinary %}
+
+{% if user.is_authenticated and user.username == comment.author %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">Edit Comment</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form class="signup" id="add_thread_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-secondary right mb-2" type="submit" value="Save">Save</button>
+        </form>
+    </div>
+</div>
+
+{% elif user.is_authenticated %}
