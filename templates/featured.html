@@ -29,6 +29,8 @@
                                 <h5 class="text-center">{{ thread.year }} {{ thread.make }}
                                     {{ thread.model }}
                                 </h5>
+                                <h4>Admin comments:</h4>
+                                <p>{{ thread.feature_cap }}</p>
                                 <p class="card-text text-muted h6">{{ thread.author }} | {{ thread.post_date}} </p>
                                 <!-- Thread post like -->
                                 {% if user.is_authenticated %}
