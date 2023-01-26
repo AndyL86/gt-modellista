@@ -188,6 +188,7 @@ MY THREADS WIREFRAME
 - Each text box uses Summernote to allow text styling to be applied.
 - The create thread confirm button is located at the bottom of the page.
 - If an unauthenticated user tries to access the Create Thread page they are presented with an access denied error.
+![Create Thread](docs/read-me/create-post.png)
 
 ### **Thread Details Page**
 - When a Build Thread is selected the user is brought to the Thread Details page detailing all the information the author has provided.
@@ -202,6 +203,17 @@ MY THREADS WIREFRAME
 ## **ACCOUNTS**
 <hr>
 
+### **Register Account**
+![Regsiter Account](docs/read-me/register.png)
+
+### **Log in**
+![Log In](docs/read-me/login.png)
+
+### **Sign out**
+![Sign Out](docs/read-me/signout.png)
+
+### **Access denied**
+![Access Denied](docs/read-me/denied.png)
 
 ## **TESTING**
 <hr>

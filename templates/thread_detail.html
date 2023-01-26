@@ -73,10 +73,12 @@
                     <hr class="hr-comment">
                     <!-- Edit/Delete Comments -->
                     {% if user.is_authenticated and user.username == comment.name %}
-                    <a href="{% url 'edit_comment' comment.id %}"><button
-                            class="btn-sm btn-secondary ">Edit</button></a>
-                            <form action="{% url 'delete_comment' comment.id %}" method="get">
-                                <button class="btn btn-danger" action="submit">Delete</button></form>
+                    <div class="col-sm mx-3 d-flex">
+                        <a href="{% url 'edit_comment' comment.id %}"><button
+                                class="btn btn-success">Edit</button></a>
+                        <form action="{% url 'delete_comment' comment.id %}" method="get">
+                            <button class="btn btn-danger" action="submit">Delete</button></form>
+                    </div>
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
