@@ -195,10 +195,15 @@ MY THREADS WIREFRAME
 - The main body of the page displays the vehicle year, make and model as the page title, below this are 2 text box areas containing the 'Story' and 'Modifications' sections and the thread image.
 - Below the image is a 'heart' icon with a number counter, this allows authenticated users to like the thread and provides a total number of likes to all users.
 - Alternatively, if the heart icon has already been selected showing a like, the heart can be unselected to remove the like.
+![Thread Details](docs/read-me/thread-details.png)
 
 ### **Comments Section**
 - At the bottom of the page all users are able to view the comments section.
 - Authenticated users are able to leave comments.
+![Comments Section](docs/read-me/comments.png)
+
+#### **Edit/Delete Comments**
+![Edit/Delete Comments](docs/read-me/edit-comments.png)
 
 ## **ACCOUNTS**
 <hr>
