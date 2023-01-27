@@ -115,11 +115,9 @@ Wireframes for each page are linked here:
 
 [Build Thread Posts](docs/read-me/view-build-thread-post.png)
 
-FEATURED WIREFRAME
+[Featured Page](docs/read-me/featured.png)
 
-MY THREADS WIREFRAME
-
-[Partners Page](docs/read-me/partners.png)
+[My Threads Page](docs/read-me/my-threads-page.png)
 
 [Signup Page](docs/read-me/signup-page.png)
 
