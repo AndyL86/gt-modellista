@@ -33,7 +33,7 @@ class Thread(models.Model):
     def number_of_likes(self):
         """ Returns number of likes """
         return self.likes.count()
-
+    
 
 class Comment(models.Model):
     """ Thread user comments model """
