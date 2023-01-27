@@ -15,6 +15,10 @@
 
 ## **HTML Validation**
 
+All HTML code has been run through [W3C - HTML](https://validator.w3.org/) validator and returns no errors, results can be viewed below:
+
+#### **Index.html**
+
 
 <hr>
 
