@@ -36,7 +36,7 @@
                         {% if user.is_authenticated %}
                         <form action="{% url 'thread_like' thread.slug %}" method="POST">
                             {% csrf_token %}
-                            {% if liked %}
+                            {% if user in thread.likes  %}
                             <button type="submit" name="userthread_id" value="{{thread.slug}}" class="btn-like"><i
                                     class="fa-regular fa-thumbs-up"></i></button>
                             {% else %}

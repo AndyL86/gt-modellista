@@ -12,6 +12,7 @@ from .forms import ThreadForm, CommentForm
 
 
 def Home(request):
+    """ View for Home Page """
     return render(request, "index.html")
 
 
@@ -80,6 +81,7 @@ class ThreadDetail(View):
 
 
 class UserThreads(generic.ListView):
+    """ View for build threads posted by user on My Threads """
     def get(self, request):
         if request.user.is_authenticated:
             threads = Thread.objects.filter(author=request.user)
@@ -176,7 +178,7 @@ class ThreadLike(View):
 
 
 class Featured(View):
-
+    """ View for featured threads approved by admin """
     def get(self, request):
         featured_threads = Thread.objects.filter(featured=True)
         context = {
@@ -189,10 +191,6 @@ class Featured(View):
 def About(request):
     """return response"""
     return render(request, "about.html")
-
-
-def Partners(request):
-    return render(request, "partners.html")
 
 
 def error_404(request, exception):
