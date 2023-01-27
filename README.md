@@ -5,8 +5,9 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
 
 ![Am I Responsive?](docs/read-me/responsive.png)
 
-## **TABLE OF CONTENTS**
 <hr>
+
+## **TABLE OF CONTENTS**
 
  - [**User Experience (UX)**](#user-experience)
     * [User Stories](#user-stories)
@@ -33,8 +34,9 @@ GT Modellista is blog site for car enthusiasts to share their passions with othe
  - [**Deployment**](#deployment)
  - [**Credits**](#credits)
 
-## **USER EXPERIENCE (UX)**
 <hr>
+
+## **USER EXPERIENCE (UX)**
 
 ### **User Stories**
 
@@ -84,8 +86,9 @@ To help define the functionalities and prioritise key features, these 'User Stor
 - To provide controlled functionality based on a user's permissions.
 - To provide user's with a profile that allows them to manage their own content.
 
-## **DESIGN**
 <hr>
+
+## **DESIGN**
 
 ### **Colours**
 - For the colour schema of the site I opted for a dark theme for the header and footer, using #24272C with a contrasting lighter neutral page background colour of #C0C4CA. This is so user's can easily differentiate between the different sections of the page. I used [ColourSpace](https://mycolor.space/) to generate the colour pallette I wanted.
@@ -126,8 +129,9 @@ Wireframes for each page are linked here:
 ### **Database Schema**
 ![Database Schema](docs/read-me/data-schema.png)
 
-## **FEATURES**
 <hr>
+
+## **FEATURES**
 
 ### **Navigation**
 
@@ -143,7 +147,8 @@ Wireframes for each page are linked here:
 - Once clicked a dropdown menu appears including all the page links as above, including the dropdown menu.
 ![Mobile Nav](docs/read-me/mobile-nav.png)
 
-## **Footer**
+
+### **Footer**
 - 
 ![Footer](docs/read-me/footer.png)
 
@@ -203,8 +208,9 @@ Wireframes for each page are linked here:
 #### **Edit/Delete Comments**
 ![Edit/Delete Comments](docs/read-me/edit-comments.png)
 
-## **ACCOUNTS**
 <hr>
+
+## **ACCOUNTS**
 
 ### **Register Account**
 ![Regsiter Account](docs/read-me/register.png)
@@ -218,12 +224,15 @@ Wireframes for each page are linked here:
 ### **Access denied**
 ![Access Denied](docs/read-me/denied.png)
 
-## **TESTING**
 <hr>
+
+## **TESTING**
+
 Testing and results can be found [here](TESTING.md)
 
-## **TECHNOLOGIES USED**
 <hr>
+
+## **TECHNOLOGIES USED**
 
 ### Languages used
 
@@ -261,8 +270,9 @@ Testing and results can be found [here](TESTING.md)
 - [Balsamiq](https://balsamiq.com/)<br>
    Used to build both the database schema diagram and design wireframes.
 
-## **DEPLOYMENT**
 <hr>
+
+## **DEPLOYMENT**
 
 ### ** Create Github Repository **
 - Log in to your Github account.
@@ -295,6 +305,6 @@ Testing and results can be found [here](TESTING.md)
 
 For more information on cloning please read the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
+<hr>
 
 ## **Credits**
-<hr>

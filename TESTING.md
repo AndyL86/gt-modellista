@@ -15,20 +15,40 @@
 
 ## **HTML Validation**
 
-All HTML code has been run through [W3C - HTML](https://validator.w3.org/) validator and returns no errors, results can be viewed below:
+All HTML code has been run through the [W3C - HTML](https://validator.w3.org/) validator and returns no errors, results can be viewed below:
 
 #### **Index.html**
+![HTML Home Page](docs/testing/html-home.png)
 
+#### **About.html**
+![HTML About Page](docs/testing/html-about.png)
+
+#### **Blog-list.html**
+![HTML Blog List Page](docs/testing/html-thread-list.png)
+
+#### **Featured.html**
+![HTML Featured Page](docs/testing/html-featured.png)
+
+#### **My-threads.html**
+![HTML My Threads Page](docs/testing/html-mythreads.png)
+
+#### **Thread-detail.html**
+![HTML Thread Details Page](docs/testing/html-detail.png)
 
 <hr>
 
 ## **CSS Validation**
+
+All CSS code has been run through the [W3C - CSS](https://jigsaw.w3.org/css-validator/) validator and returns no errors, results can be viewed below:
+
 ![CSS Validator](docs/testing/css-test.png)
-- My CSS code passed validation with no errors.
+
 
 <hr>
 
 ## **Python Validation**
+
+All Python code has been run through the [CI PEP8 Testing](https://pep8ci.herokuapp.com/) validator and has returned no errors, results can be viewed below:
 
 #### **admin.py**
 ![admin-py](docs/testing/admin-py.png)
@@ -52,6 +72,5 @@ All HTML code has been run through [W3C - HTML](https://validator.w3.org/) valid
 
 ## **Lighthouse**
 
-<hr>
 
 ## **Bugs and Issues**
