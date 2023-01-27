@@ -8,8 +8,11 @@
 
 ### **Automated Testing Results: 90%**
 ![Automated Test Report](docs/testing/test-report.png)
-- Automated testing is an area that requires improvement, I ran into a number of roadblocks along the way and due to lack of knowledge and time constraints.
-- Test Views is the main area in need of improvement with a score of 74%. Further research will be conducted into how I can improve on this score.
+- Automated testing is an area that requires improvement, I ran into a number of roadblocks along the way due to lack of knowledge and time constraints.
+- Test Views is the main area in need of improvement with a score of 73%. Further research will be conducted into how I can improve on this score.
+
+### **Manual Testing**
+- To support the automated testing score I carried out thorough manual testing to find any possible errors or issues.
 
 <hr>
 

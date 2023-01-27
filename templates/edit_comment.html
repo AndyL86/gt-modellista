@@ -5,6 +5,7 @@
 {% load cloudinary %}
 
 {% if user.is_authenticated and user.username == comment.name %}
+<!-- Edit comment title -->
 <section>
     <div class="container">
         <div class="row">
@@ -14,7 +15,7 @@
             </div>
         </div>
     </div>
-
+<!-- Edit comment form -->
     <div class="row">
         <div class="col-6">
             <form class="signup" method="post" enctype="multipart/form-data">

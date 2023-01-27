@@ -6,7 +6,7 @@
 
 
 {% if user.is_authenticated and user.id == thread.author.id %}
-
+<!-- Edit Thread form -->
 <div class="container">
     <div class="container px-5">
         <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
@@ -23,7 +23,7 @@
     </div>
 </div>
 {% else %}
-
+<!-- Access denied to unauthenticated users -->
 <div class="container">
     <div class="row">
         <div class="col-md-10 mt-2 mx-auto text-center add_build_form">
