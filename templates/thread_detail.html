@@ -13,7 +13,7 @@
                 <hr>
                 <h2 class="text-center py-3">Story:</h2>
                 <div>
-                    <p>{{ thread.story | safe }}</p>
+                    {{ thread.story | safe }}
                 </div>
                 <hr>
                 <h2 class="text-center py-3">Modifications:</h2>
@@ -25,7 +25,7 @@
     </div>
     <!-- Thread Image -->
     <div class="row gx-5">
-        <div class="col-12"><img class="img-fluid rounded-3 mb-3" src=" {{ thread.thread_image.url }}" alt="..." />
+        <div class="col-12"><img class="img-fluid rounded-3 mb-3" src=" {{ thread.thread_image.url }}" alt="...">
         </div>
     </div>
     <!-- Likes and Comments counter -->
@@ -76,8 +76,7 @@
                     <!-- Edit/Delete Comments -->
                     {% if user.is_authenticated and user.username == comment.name %}
                     <div class="col-sm mx-3 d-flex">
-                        <a href="{% url 'edit_comment' comment.id %}"><button
-                                class="btn btn-success">Edit</button></a>
+                        <a href="{% url 'edit_comment' comment.id %}"><button class="btn btn-success">Edit</button></a>
                         <form action="{% url 'delete_comment' comment.id %}" method="get">
                             <button class="btn btn-danger py-1" action="submit">Delete</button></form>
                     </div>
@@ -128,10 +127,9 @@
             </div>
             {% endif %}
             {% endif %}
-
         </div>
     </div>
 </div>
-</div>
+
 
 {% endblock %}
