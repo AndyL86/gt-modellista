@@ -210,6 +210,12 @@ Wireframes for each page are linked here:
 - I would have liked to spend more time styling these buttons but due to time contraints I was unable to carry out any further styling.
 ![Edit/Delete Comments](docs/read-me/edit-comments.png)
 
+### **Future Features**
+- Implementation of user profiles to allow registered users to personalise their account.
+- Events page with a calender and notifications functionality.
+- Link a social media feed to the home page to allow social media posts to be published to the site.
+- Password reset functionality.
+
 <hr>
 
 ## **ACCOUNTS**
