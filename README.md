@@ -1,5 +1,5 @@
 # **GT Modellista Blog - Introduction**
-GT Modellista is blog site for car enthusiasts to share their passions with other like-minded individuals from around the world. This project is a Full-Stack development website built using the Django framework. GT Modellista allows registered users to post articles in two seperate categories, 'Build Threads' for vehicles and 'Diecasts' for scale-model collections. Registered users are also able to like and comment on posts made by other members of the community.
+GT Modellista is blog site for car enthusiasts to share their passions with other like-minded individuals from around the world. This project is a Full-Stack development website built using the Django framework. GT Modellista allows registered users to post articles in the Build Threads section of the page and view, edit or delete their posts in the My Threads section. Registered users are also able to like and comment on posts made by other members of the community.
 
 [GT Modellista](https://gt-modellista.herokuapp.com/) - The live site can be viewed here.
 
@@ -44,7 +44,7 @@ Unregistered site user:
 
 - As a user, I can understand the site's purpose as soon as I land on the homepage.
 - As a user, I can navigate the sites content without difficulty or confusion.
-- As a user, I can view a list of all the blog posts in the 'Build Threads', 'Featured' and 'Partners' sections of the site.
+- As a user, I can view a list of all the blog posts in the 'Build Threads', 'Featured' and 'My Threads' sections of the site.
 - As a user, I can click on and view each blog post so I can view the content.
 - As a user, I can view 'Featured Build Threads'.
 - As a user, I can view how many likes each blog post has received.
@@ -116,7 +116,7 @@ Wireframes for each page are linked here:
 
 [Create Build Thread](docs/read-me/create-build-thread.png)
 
-[Build Thread Posts](docs/read-me/view-build-thread-post.png)
+[Build Thread Details](docs/read-me/view-build-thread-post.png)
 
 [Featured Page](docs/read-me/featured.png)
 
@@ -149,13 +149,13 @@ Wireframes for each page are linked here:
 
 
 ### **Footer**
-- 
+- Located at the bottom of the page the footer contains links to social media platforms. I wanted to keep the footer as simple as possible to allow users easier navigation of the site by keeping any page links in one menu.
 ![Footer](docs/read-me/footer.png)
 
 ### **Home Page**
 - Upon landing on the homepage the user is presented with a header banner which details the sites purpose and contains a click button which directs the user to the account registration page.
-- Underneath the header is the carousel image real of 3 'Featured' build thread blog posts. Featured posts are selected by Admin. Navigation icons are displayed on each side of the image and a counter tab is displayed at the bottom of the image to display which image is being displayed.
-- At the bottom of the page is a 'Popular' section displaying the build threads with the most likes.
+- Underneath the header is the carousel image real of 3 default images. Navigation icons are displayed on each side of the image and a counter tab is displayed at the bottom of the image to display which image is being displayed.
+- At the bottom of the page is a 'Partners' section displaying news articles created by Admin.
 
 ### **About Page**
 - The About page contains a header with styled image and the page title.
@@ -206,6 +206,8 @@ Wireframes for each page are linked here:
 ![Comments Section](docs/read-me/comments.png)
 
 #### **Edit/Delete Comments**
+- For authenticated users the Edit and Delete comments buttons are visible underneath the relevant comment posted by the user. 
+- I would have liked to spend more time styling these buttons but due to time contraints I was unable to carry out any further styling.
 ![Edit/Delete Comments](docs/read-me/edit-comments.png)
 
 <hr>
@@ -308,3 +310,7 @@ For more information on cloning please read the github documentation [here](http
 <hr>
 
 ## **Credits**
+- [The Code Institutes](https://codeinstitute.net/) 'I Think Therefore I Blog' project which inspired the main functionality of the blog.
+- [Stack Overflow](https://stackoverflow.com/) for help with errors encountered during development.
+- [W3Schools - Python](https://www.w3schools.com/python/) for reference and research.
+- Richard Wells (https://github.com/D0nni387) - Code Institute mentor, without his patience and support I would not have been able to complete my project to a standard that I am happy with.

@@ -169,6 +169,7 @@ hr {
 
 .list-image {
   max-width: 100%;
+  height: auto;
 }
 
 /* Home Page styling */

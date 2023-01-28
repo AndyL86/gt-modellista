@@ -1,6 +1,12 @@
 # **GT Modellista Testing Documentation**
 
 ## **Table of contents**
+ - [**Automated Testing**](#automated-testing)
+ - [**HTML Validation**](#html-validation)
+ - [**CSS Validation**](#css-validation)
+ - [**Python Validation**](#python-validation)
+ - [**Lighthouse**](#lighthouse)
+ - [**Bugs and Issues**](#bugs-and-issues)
 
 <hr>
 
@@ -10,9 +16,6 @@
 ![Automated Test Report](docs/testing/test-report.png)
 - Automated testing is an area that requires improvement, I ran into a number of roadblocks along the way due to lack of knowledge and time constraints.
 - Test Views is the main area in need of improvement with a score of 73%. Further research will be conducted into how I can improve on this score.
-
-### **Manual Testing**
-- To support the automated testing score I carried out thorough manual testing to find any possible errors or issues.
 
 <hr>
 
@@ -74,6 +77,14 @@ All Python code has been run through the [CI PEP8 Testing](https://pep8ci.heroku
 <hr>
 
 ## **Lighthouse**
-
+- The lighthouse score results can be found below. The main area for improvement is performance, however this low score is due to image file sizes being quite big. The purpose of these images was to test thread creation directly from a mobile or tablet device using the images stored on the device. This will be researched into how I can manage the image sizes for future applications.
+![Lighthouse](docs/testing/lighthouse.png)
 
 ## **Bugs and Issues**
+- One of the main bugs I encountered during development was my CSS file not being loaded upon deployment, only in the local Gitpod terminal. To remedy this, an application called 'whitenoise' was installed to pull the static files. For future applications I am going to research the cause of this issue.
+- Additionally, an issue is still visible in devtools for a favicon 404 error. Unfortunately, I was unable to remedy this due to time constraints and lack of knowledge.
+![whitenoise](docs/testing/whitenoise.png)
+
+- I ran into a small issue with my delete thread button not working, this was remedied by correctly moving my closing div to fall within the if arguement of the authenticated user.
+
+- Currently the like button icon style is loaded when users are not logged in. However, once a user is logged in the style for the icon disappears. I have tried to remedy this issue, however due to time constraints with the project hand in I was unable to fix this issue.
