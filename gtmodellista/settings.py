@@ -93,7 +93,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'gtmodellista.urls'
@@ -116,9 +115,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gtmodellista.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['https://gt-modellista.herokuapp.com']
-
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
 # # Database
 # # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -131,10 +127,7 @@ ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 # }
 
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
-    }
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -175,7 +168,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
