@@ -116,6 +116,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gtmodellista.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://gt-modellista.herokuapp.com']
+
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
 # # Database
 # # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
