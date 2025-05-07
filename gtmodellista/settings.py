@@ -93,6 +93,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    'allauth.account.middleware.AccountMiddleware'
 ]
 
 ROOT_URLCONF = 'gtmodellista.urls'
@@ -128,8 +129,12 @@ WSGI_APPLICATION = 'gtmodellista.wsgi.application'
 
 DATABASES = {
    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # or your specific DB name
+        'USER': 'postgres.veswatpeqvhceoltutqq',
+        'PASSWORD': 'HollieMabel25!£',
+        'HOST': 'aws-0-eu-west-2.pooler.supabase.com',
+        'PORT': '5432',
     }
 }
 
