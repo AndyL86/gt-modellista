@@ -127,9 +127,17 @@ WSGI_APPLICATION = 'gtmodellista.wsgi.application'
 # }
 
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+#    'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # usually 'postgres' for Supabase
+        'USER': 'postgres',
+        'PASSWORD': 'Golfdriver16!',
+        'HOST': 'veswatpeqvhceoltutqq.supabase.co',
+        'PORT': '5432',
     }
 }
 
